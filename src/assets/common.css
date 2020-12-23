@@ -1,0 +1,15 @@
+.o-demo-form {
+    background: white;
+    border-radius: 0.25rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+
+.o-demo-form__buttons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
