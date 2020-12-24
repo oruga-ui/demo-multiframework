@@ -1,14 +1,27 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
-
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: '/tailwind',
+    name: 'Tailwind',
+    component: () => import('../views/Tailwind.vue')
+  },
+  {
+    path: '/bootstrap',
+    name: 'Bootstrap',
+    component: () => import('../views/Bootstrap.vue')
+  },
+  {
+    path: '/bulma',
+    name: 'Bulma',
+    component: () => import('../views/Bulma.vue')
+  },
+  {
+    path: '/material',
+    name: 'Material',
+    component: () => import('../views/Material.vue')
   }
 ]
 

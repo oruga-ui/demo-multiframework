@@ -1,3 +1,0 @@
-<template>
-    <oruga-form />
-</template>

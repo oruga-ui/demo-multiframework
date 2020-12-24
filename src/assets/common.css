@@ -1,3 +1,13 @@
+.app__navigation {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem;
+}
+
+.o-demo__title {
+    text-align: center;
+}
+
 .o-demo-form {
     background: white;
     border-radius: 0.25rem;

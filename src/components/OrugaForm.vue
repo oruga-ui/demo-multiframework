@@ -1,6 +1,5 @@
 <template>
     <section>
-        <h1> Tailwind </h1>
         <form class="o-demo-form">
             <div class="">
                 <o-field label="Username" label-for="username">
