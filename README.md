@@ -1,4 +1,4 @@
-# oruga-tailwindcss
+# demo-multiframework
 
 ## Project setup
 ```
