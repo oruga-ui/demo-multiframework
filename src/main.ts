@@ -13,16 +13,20 @@ import OrugaForm from "./components/OrugaForm.vue";
 import './assets/common.css';
 // import './assets/bootstrap.css';
 
-import './assets/material.css';
+//import './assets/material.css';
 
 // import './assets/tailwindcss.css';
 // import './assets/oruga-tailwindcss.css';
+
+import './assets/bulma.css';
 
 Vue.config.productionTip = false
 
 library.add(fas);
 Vue.component('vue-fontawesome', FontAwesomeIcon);
 Vue.component('oruga-form', OrugaForm);
+
+/* TAILWIND */
 
 // Vue.use(Oruga, {
 //     iconPack: 'fas',
@@ -95,33 +99,72 @@ Vue.component('oruga-form', OrugaForm);
 
 /* MATERIAL */
 
+// Vue.use(Oruga, {
+//     iconPack: 'fas',
+//     iconComponent: 'vue-fontawesome',
+//     statusIcon: false,
+//     button: {
+//         override: true,
+//         rootClass: 'btn',
+//         outlinedClass: 'btn-outline-primary',
+//         disabledClass: 'btn-disabled'
+//     },
+//     field: {
+//         override: true,
+//         rootClass: 'form-group',
+//         labelClass: '',
+//         messageClass: 'form-text',
+//         variantClass: 'field-'
+//     },
+//     input: {
+//         override: true,
+//         inputClass: 'form-control',
+//         variantClass: 'input-'
+//     },
+//     dropdown: {
+//         override: true,
+//         rootClass: 'dropdown',
+//         menuClass: 'dropdown-menu show',
+//         itemClass: 'dropdown-item'
+//     },
+//     icon: {
+//         override: true
+//     }
+// })
+
+/* BULMA */
+
 Vue.use(Oruga, {
     iconPack: 'fas',
     iconComponent: 'vue-fontawesome',
     statusIcon: false,
     button: {
         override: true,
-        rootClass: 'btn',
-        outlinedClass: 'btn-outline-primary',
+        rootClass: 'button',
+        outlinedClass: 'is-outlined',
         disabledClass: 'btn-disabled'
     },
     field: {
         override: true,
-        rootClass: 'form-group',
-        labelClass: '',
+        rootClass: 'field',
+        labelClass: 'label',
         messageClass: 'form-text',
         variantClass: 'field-'
     },
     input: {
         override: true,
-        inputClass: 'form-control',
-        variantClass: 'input-'
+        inputClass: 'input is-static',
+        variantClass: ''
     },
     dropdown: {
         override: true,
-        rootClass: 'dropdown',
-        menuClass: 'dropdown-menu show',
+        rootClass: 'dropdown is-active',
+        menuClass: 'dropdown-menu dropdown-content',
         itemClass: 'dropdown-item'
+    },
+    'dropdown-item': {
+        override: true,
+        itemActiveClass: 'is-active'
     },
     icon: {
         override: true
