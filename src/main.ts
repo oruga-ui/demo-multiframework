@@ -11,7 +11,10 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import OrugaForm from "./components/OrugaForm.vue";
 
 import './assets/common.css';
-import './assets/bootstrap.css';
+// import './assets/bootstrap.css';
+
+import './assets/material.css';
+
 // import './assets/tailwindcss.css';
 // import './assets/oruga-tailwindcss.css';
 
@@ -55,6 +58,43 @@ Vue.component('oruga-form', OrugaForm);
 //     }
 // })
 
+
+/* BOOTSTRAP */
+
+// Vue.use(Oruga, {
+//     iconPack: 'fas',
+//     iconComponent: 'vue-fontawesome',
+//     statusIcon: false,
+//     button: {
+//         override: true,
+//         rootClass: 'btn',
+//         outlinedClass: 'btn-outline-primary',
+//         disabledClass: 'btn-disabled'
+//     },
+//     field: {
+//         override: true,
+//         labelClass: 'form-label',
+//         messageClass: 'form-text',
+//         variantClass: 'field-'
+//     },
+//     input: {
+//         override: true,
+//         inputClass: 'form-control',
+//         variantClass: 'input-'
+//     },
+//     dropdown: {
+//         override: true,
+//         rootClass: 'dropdown',
+//         menuClass: 'dropdown-menu show',
+//         itemClass: 'dropdown-item'
+//     },
+//     icon: {
+//         override: true
+//     }
+// })
+
+/* MATERIAL */
+
 Vue.use(Oruga, {
     iconPack: 'fas',
     iconComponent: 'vue-fontawesome',
@@ -67,7 +107,8 @@ Vue.use(Oruga, {
     },
     field: {
         override: true,
-        labelClass: 'form-label',
+        rootClass: 'form-group',
+        labelClass: '',
         messageClass: 'form-text',
         variantClass: 'field-'
     },
