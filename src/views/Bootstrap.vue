@@ -19,19 +19,16 @@ Vue.use(Oruga, {
     iconComponent: 'vue-fontawesome',
     statusIcon: false,
     button: {
-        override: true,
         rootClass: 'btn',
         outlinedClass: 'btn-outline-primary',
         disabledClass: 'btn-disabled'
     },
     field: {
-        override: true,
         labelClass: 'form-label',
         messageClass: 'form-text',
         variantClass: 'field-'
     },
     input: {
-        override: true,
         inputClass: 'form-control',
         variantClass: 'input-'
     },

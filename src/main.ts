@@ -7,6 +7,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import OrugaForm from "./components/OrugaForm.vue";
 
+import '@oruga-ui/oruga/dist/oruga.css'
 import './assets/common.css';
 
 Vue.config.productionTip = false

@@ -25,7 +25,7 @@
 
 /* Input */
 .input {
-    @apply shadow appearance-none border w-full py-2 px-3 text-gray-700 leading-tight;
+    @apply appearance-none border w-full py-2 px-3 text-gray-500 leading-tight;
 }
 .input-danger {
     @apply border-red-500;

@@ -1,21 +1,28 @@
 .app__navigation {
     display: flex;
     justify-content: space-evenly;
-    margin: 3rem;
+    margin: 1rem;
 }
 
 .o-demo__title {
     text-align: center;
+    padding: 2rem;
 }
 
 .o-demo-form {
     background: white;
     border-radius: 0.25rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 14vw;
+    padding-right: 14vw;
     padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+    min-height: 50vh;
+}
+
+.o-demo__navigation-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .o-demo-form__buttons-wrapper {
