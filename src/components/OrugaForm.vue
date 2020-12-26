@@ -1,6 +1,6 @@
 <template>
   <section>
-    <o-steps stepContentClass="o-demo-form">
+    <o-steps v-model="currentStep" stepContentClass="o-demo-form">
       <o-step-item step="1" label="Profile">
         <h1 class="title has-text-centered">Fill your profile information</h1>
         <div class="">
@@ -54,8 +54,8 @@
       <o-step-item step="2" label="Account">
         <h1 class="title has-text-centered">Create an account</h1>
         <div class="">
-          <o-field label="Username" label-for="username">
-            <o-input id="username" type="text" placeholder="Username" />
+          <o-field label="Username" label-for="username" :message="messages.username" variant="danger">
+            <o-input v-model="username" id="username" type="text" placeholder="Username" />
           </o-field>
         </div>
         <div class="">
@@ -63,16 +63,18 @@
             label="Password"
             label-for="password"
             variant="danger"
-            message="Please choose a password"
+            :message="messages.password"
             grouped
           >
             <o-input
+              v-model="password"
               id="password"
               type="password"
               placeholder="Password"
               expanded
             />
             <o-input
+              v-model="passwordCheck"
               id="repeat-password"
               type="password"
               placeholder="Repeat assword"
@@ -82,10 +84,20 @@
         </div>
       </o-step-item>
 
-      <o-step-item label="Finish" disabled>
+      <o-step-item label="Finish" step=3>
         <h1 class="title has-text-centered">You're done!</h1>
         🎉 Your account setup is complete! Click on the button below to complete
         the process
+        <div class="o-demo-form__activate-button-wrapper ">
+          <o-button
+            @click="activateAccount"
+          >Activate account</o-button>
+        </div>
+        <p style="position: relative">
+          <o-loading full-page :active.sync="isLoading">
+            <o-icon icon="sync-alt" size="large" spin></o-icon>
+          </o-loading>
+        </p>
       </o-step-item>
 
       <template slot="navigation" slot-scope="{ previous, next }">
@@ -115,10 +127,14 @@
 export default {
   data: function () {
     return {
-      currentStep: 0,
+      currentStep: 1,
       name: "",
       privacy: false,
+      username: "",
+      password: "",
+      passwordCheck: "",
       terms: false,
+      isLoading: false,
       messages: {},
       currentMenu: { value: "mr", text: "Mr." },
       menus: [
@@ -129,29 +145,42 @@ export default {
   },
   methods: {
     isAValidStep(stepNumber) {
-        let valid = true;
-        this.messages = {}
-        switch (stepNumber) {
-            case 0:
-            if (this.name === "") {
-                this.messages = Object.assign({...this.messages}, { name: "Name is required" });
-                valid = false;
-            }
-            if (!this.privacy || !this.terms) {
-                this.messages = Object.assign({...this.messages}, { privacyTerms: "You have to accept both" });
-                valid = false;
-            }
-            break;
-            case 1:
-                break;
-        }
-        return valid;
+      this.messages = {}
+      switch (stepNumber) {
+          case 1:
+              if (this.name === "") {
+                  this.messages.name = "Name is required";
+              }
+              if (!this.privacy || !this.terms) {
+                  this.messages.privacyTerms = "You have to accept both";
+              }
+              break;
+          case 2:
+              if (this.username === "") {
+                  this.messages.username = "Username is required";
+              }
+              if (this.password === "") {
+                  this.messages.password = "Password is required";
+              }
+              if (this.password !== this.passwordCheck) {
+                  this.messages.password = "The two passwords must be equal";
+              }
+              break;
+      }
+      this.messages = Object.assign({}, {...this.messages})
+      return Object.keys(this.messages).length === 0;
     },
     goNextIfStepIsValid(action) {
-        if (this.isAValidStep(this.currentStep)) {
-            action();
-        }
+      if (this.isAValidStep(this.currentStep)) {
+        action();
+      }
     },
+    activateAccount() {
+      this.isLoading = true
+      setTimeout(() => {
+        this.isLoading = false
+      }, 3 * 1000)
+    }
   },
 };
 </script>

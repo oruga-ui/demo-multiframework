@@ -25,8 +25,9 @@
     justify-content: center;
 }
 
-.o-demo-form__buttons-wrapper {
+.o-demo-form__activate-button-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 25vh;
 }

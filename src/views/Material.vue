@@ -40,7 +40,6 @@ Vue.use(Oruga, {
         itemClass: 'dropdown-item'
     },
     icon: {
-        override: true
     }
 })
 

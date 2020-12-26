@@ -44,7 +44,6 @@ Vue.use(Oruga, {
         itemActiveClass: 'is-active'
     },
     icon: {
-        override: true
     }
 })
 
