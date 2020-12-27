@@ -39,6 +39,13 @@
     min-height: 50vh;
 }
 
+@media (min-width: 768px) {
+  .o-demo-form {
+    padding-left: 14vw;
+    padding-right: 14vw;
+  }
+}
+
 .o-demo__navigation-wrapper {
     display: flex;
     align-items: center;

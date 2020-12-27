@@ -45,7 +45,7 @@
           <o-input name="country" placeholder="Country" expanded></o-input>
         </o-field>
 
-        <o-field label="I need visitors to consent to the following agreements" variant="danger" :message="messages.privacyTerms">
+        <o-field label="I need visitors to consent to the following agreements" variant="danger" :message="messages.privacyTerms" grouped>
           <o-checkbox v-model="privacy">Privacy Policy</o-checkbox>
           <o-checkbox v-model="terms">Terms and Conditions</o-checkbox>
         </o-field>

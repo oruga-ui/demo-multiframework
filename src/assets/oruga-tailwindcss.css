@@ -24,7 +24,7 @@
 }
 
 .field--grouped {
-  @apply block;
+  @apply flex-wrap;
 }
 
 .o-field .input {
@@ -33,7 +33,7 @@
 
 @screen md {
   .field--grouped {
-    @apply flex;
+    @apply flex-no-wrap;
   }
 
 }
