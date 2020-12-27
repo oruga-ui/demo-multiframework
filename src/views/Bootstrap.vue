@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1 class="o-demo__title">Registration form made with Bootstrap</h1>
         <oruga-form />
     </div>
 </template>

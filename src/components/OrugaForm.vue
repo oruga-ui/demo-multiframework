@@ -2,7 +2,7 @@
   <section>
     <o-steps v-model="currentStep" stepContentClass="o-demo-form">
       <o-step-item step="1" label="Profile">
-        <h1 class="title has-text-centered">Fill your profile information</h1>
+        <h2 class="title has-text-centered">Fill your profile information</h2>
         <div class="">
           <o-field :message="messages.name" variant="danger">
             <o-dropdown aria-role="list" v-model="currentMenu">

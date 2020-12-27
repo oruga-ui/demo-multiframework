@@ -1,13 +1,23 @@
 <template>
   <div id="app">
-    <div class="app__navigation">
-        <span>Framework: </span>
-        <a href="/tailwind">Tailwind</a>
-        <a href="/bootstrap">Bootstrap</a>
-        <a href="/bulma">Bulma</a>
-        <a href="/material">Material</a>
+    <div class="navigation">
+        <a v-for="framework in frameworks" :key="framework" class="navigation__item" :class="[isActive(framework) ? 'navigation__item--selected' : '']" :href="`/${framework}`">{{framework}}</a>
     </div>
-
     <router-view :key="$route.fullPath"/>
   </div>
 </template>
+
+<script>
+export default {
+  data: function () {
+    return {
+      frameworks : ['Tailwind', 'Bootstrap', 'Bulma', 'Material']
+    }
+  },
+  methods: {
+    isActive(framework) {
+      return window.location.pathname.includes(framework)
+    }
+  }
+}
+</script>

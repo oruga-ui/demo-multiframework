@@ -1,6 +1,5 @@
 <template>
     <div>
-        <h1 class="o-demo__title">Registration form made with Tailwind</h1>
         <oruga-form />
     </div>
 </template>
@@ -26,6 +25,7 @@ Vue.use(Oruga, {
         disabledClass: 'btn-disabled'
     },
     field: {
+        groupedClass: 'field--grouped',
         labelClass: 'field-label',
         messageClass: 'text-xs italic',
         variantClass: 'field-'
@@ -35,12 +35,19 @@ Vue.use(Oruga, {
         roundedClass: 'rounded',
         variantClass: 'input-'
     },
+    checkbox: {
+      checkClass: 'checkbox',
+      checkCheckedClass: 'checkbox-checked'
+    },
     dropdown: {
         override: true,
         rootClass: 'dropdown',
         menuClass: 'dropdown-menu',
         itemClass: 'dropdown-item'
-    }
+    },
+    // steps: {
+    //   itemActiveClass: 'steps-marker'
+    // }
 })
 
 export default {

@@ -23,6 +23,21 @@
     @apply text-red-500;
 }
 
+.field--grouped {
+  @apply block;
+}
+
+.o-field .input {
+  @apply mb-2;
+}
+
+@screen md {
+  .field--grouped {
+    @apply flex;
+  }
+
+}
+
 /* Input */
 .input {
     @apply appearance-none border w-full py-2 px-3 text-gray-500 leading-tight;
@@ -42,4 +57,22 @@
 }
 .dropdown-item {
     @apply relative block no-underline px-1 py-2 cursor-pointer;
+}
+
+
+/* Checkbox */
+
+.checkbox {
+  @apply appearance-none bg-blue-900 border-gray-100;
+}
+
+.checkbox-checked {
+  @apply bg-blue-500;
+}
+
+/* Steps */
+
+.steps-marker {
+  background-color: red;
+  border-color: aqua;
 }
