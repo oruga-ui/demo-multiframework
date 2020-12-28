@@ -1,8 +1,8 @@
 import { getValueByPath } from './helpers.js';
-import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, u as use } from './plugins-0f57a139.js';
-import './Icon-9c2a6c7e.js';
+import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, u as use } from './plugins-3fa0f67b.js';
+import './Icon-60401233.js';
 import './SlotComponent-c00a1886.js';
-import { T as TabbedMixin, a as TabbedChildMixin } from './TabbedChildMixin-e0a06c7d.js';
+import { T as TabbedMixin, a as TabbedChildMixin } from './TabbedChildMixin-7b377ffb.js';
 
 //
 /**

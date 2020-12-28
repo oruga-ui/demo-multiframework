@@ -1,5 +1,5 @@
 import { getValueByPath, merge, defaultIfUndefined } from './helpers.js';
-import { c as config, B as BaseComponentMixin, n as normalizeComponent } from './plugins-0f57a139.js';
+import { c as config, B as BaseComponentMixin, n as normalizeComponent } from './plugins-3fa0f67b.js';
 
 const mdiIcons = {
   sizes: {

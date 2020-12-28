@@ -55,13 +55,17 @@ var BaseComponentMixin = {
       }
 
       if (typeof currentClass === "function") {
-        currentClass = currentClass(suffix);
+        currentClass = currentClass(suffix, {
+          props: this.$props
+        });
       } else {
         currentClass = _defaultSuffixProcessor(currentClass, suffix);
       }
 
       if (typeof globalClass === "function") {
-        globalClass = globalClass(suffix);
+        globalClass = globalClass(suffix, {
+          props: this.$props
+        });
       } else {
         globalClass = _defaultSuffixProcessor(globalClass, suffix);
       }

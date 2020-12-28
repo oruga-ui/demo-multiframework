@@ -1,5 +1,5 @@
 import { getValueByPath } from './helpers.js';
-import { c as config } from './plugins-0f57a139.js';
+import { c as config } from './plugins-3fa0f67b.js';
 
 var FormElementMixin = {
   inject: {

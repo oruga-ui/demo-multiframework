@@ -104,13 +104,15 @@
         <div class="o-demo__navigation-wrapper">
           <o-button
             outlined
+            variant="primary"
             v-show="!previous.disabled"
             @click.prevent="previous.action"
           >
-            Previous
+            Prev
           </o-button>
           <o-button
             outlined
+            variant="primary"
             v-show="!next.disabled"
             @click.prevent="goNextIfStepIsValid(next.action)"
           >
@@ -147,25 +149,25 @@ export default {
     isAValidStep(stepNumber) {
       this.messages = {}
       switch (stepNumber) {
-          case 1:
-              if (this.name === "") {
-                  this.messages.name = "Name is required";
-              }
-              if (!this.privacy || !this.terms) {
-                  this.messages.privacyTerms = "You have to accept both";
-              }
-              break;
-          case 2:
-              if (this.username === "") {
-                  this.messages.username = "Username is required";
-              }
-              if (this.password === "") {
-                  this.messages.password = "Password is required";
-              }
-              if (this.password !== this.passwordCheck) {
-                  this.messages.password = "The two passwords must be equal";
-              }
-              break;
+        case 1:
+          if (this.name === "") {
+            this.messages.name = "Name is required";
+          }
+          if (!this.privacy || !this.terms) {
+            this.messages.privacyTerms = "You have to accept both";
+          }
+          break;
+        case 2:
+          if (this.username === "") {
+            this.messages.username = "Username is required";
+          }
+          if (this.password === "") {
+            this.messages.password = "Password is required";
+          }
+          if (this.password !== this.passwordCheck) {
+            this.messages.password = "The two passwords must be equal";
+          }
+          break;
       }
       this.messages = Object.assign({}, {...this.messages})
       return Object.keys(this.messages).length === 0;

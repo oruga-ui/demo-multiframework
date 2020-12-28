@@ -1,4 +1,4 @@
-import { n as normalizeComponent, B as BaseComponentMixin } from './plugins-0f57a139.js';
+import { n as normalizeComponent, B as BaseComponentMixin } from './plugins-3fa0f67b.js';
 
 var script = {
   name: 'OFieldBody',

@@ -3,10 +3,10 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var helpers = require('./helpers.js');
-var plugins = require('./plugins-75a06b83.js');
-require('./Icon-8c5f2b35.js');
+var plugins = require('./plugins-3f7829d9.js');
+require('./Icon-5b4af0b7.js');
 require('./ssr-39c7e185.js');
-var Loading = require('./Loading-eaeb412c.js');
+var Loading = require('./Loading-14b137fc.js');
 
 let localVueInstance;
 const LoadingProgrammatic = {

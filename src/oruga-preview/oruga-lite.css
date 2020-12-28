@@ -405,7 +405,7 @@ html {
   /* --- */
 }
 .o-chk input[type=checkbox] {
-  margin-top: 0.25em;
+  margin: 0;
   vertical-align: top;
   background-repeat: no-repeat;
   background-position: center;
@@ -884,11 +884,16 @@ html {
   /* --- */
 }
 .o-radio input[type=radio] {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  outline: none;
-  z-index: -1;
+  margin: 0;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 .o-radio__check {
   border-radius: 50%;

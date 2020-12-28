@@ -1,5 +1,5 @@
 import { getValueByPath, toCssDimension, createAbsoluteElement, removeElement } from './helpers.js';
-import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, u as use } from './plugins-0f57a139.js';
+import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, u as use } from './plugins-3fa0f67b.js';
 import { d as directive } from './trapFocus-25a621e6.js';
 
 //

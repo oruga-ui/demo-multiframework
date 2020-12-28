@@ -1,5 +1,5 @@
 import { toCssDimension } from './helpers.js';
-import { B as BaseComponentMixin, n as normalizeComponent, e as registerComponent, u as use } from './plugins-0f57a139.js';
+import { B as BaseComponentMixin, n as normalizeComponent, e as registerComponent, u as use } from './plugins-3fa0f67b.js';
 
 /**
  * A placeholder for content to load

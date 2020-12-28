@@ -1,6 +1,6 @@
 import { getValueByPath, toCssDimension, removeElement, merge } from './helpers.js';
-import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, b as registerComponentProgrammatic, u as use, V as VueInstance } from './plugins-0f57a139.js';
-import { _ as __vue_component__$1 } from './Icon-9c2a6c7e.js';
+import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, b as registerComponentProgrammatic, u as use, V as VueInstance } from './plugins-3fa0f67b.js';
+import { _ as __vue_component__$1 } from './Icon-60401233.js';
 import { d as directive } from './trapFocus-25a621e6.js';
 
 //

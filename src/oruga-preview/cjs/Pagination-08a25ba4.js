@@ -1,6 +1,8 @@
-import { getValueByPath } from './helpers.js';
-import { c as config, n as normalizeComponent, B as BaseComponentMixin } from './plugins-0f57a139.js';
-import { _ as __vue_component__$2 } from './Icon-9c2a6c7e.js';
+'use strict';
+
+var helpers = require('./helpers.js');
+var plugins = require('./plugins-3f7829d9.js');
+var Icon = require('./Icon-5b4af0b7.js');
 
 //
 var script = {
@@ -19,7 +21,7 @@ var script = {
     tag: {
       type: String,
       default: 'a',
-      validator: value => getValueByPath(config, 'linkTags', ['a', 'button', 'input', 'router-link', 'nuxt-link']).indexOf(value) >= 0
+      validator: value => helpers.getValueByPath(plugins.config, 'linkTags', ['a', 'button', 'input', 'router-link', 'nuxt-link']).indexOf(value) >= 0
     },
     disabled: {
       type: Boolean,
@@ -73,7 +75,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  const __vue_component__ = /*#__PURE__*/normalizeComponent(
+  const __vue_component__ = /*#__PURE__*/plugins.normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -97,11 +99,11 @@ var __vue_staticRenderFns__ = [];
 var script$1 = {
   name: 'OPagination',
   components: {
-    [__vue_component__$2.name]: __vue_component__$2,
+    [Icon.__vue_component__.name]: Icon.__vue_component__,
     [__vue_component__.name]: __vue_component__
   },
   configField: 'pagination',
-  mixins: [BaseComponentMixin],
+  mixins: [plugins.BaseComponentMixin],
 
   provide() {
     return {
@@ -118,7 +120,7 @@ var script$1 = {
     perPage: {
       type: [Number, String],
       default: () => {
-        return getValueByPath(config, 'pagination.perPage', 20);
+        return helpers.getValueByPath(plugins.config, 'pagination.perPage', 20);
       }
     },
 
@@ -168,7 +170,7 @@ var script$1 = {
     iconPrev: {
       type: String,
       default: () => {
-        return getValueByPath(config, 'pagination.iconPrev', 'chevron-left');
+        return helpers.getValueByPath(plugins.config, 'pagination.iconPrev', 'chevron-left');
       }
     },
 
@@ -176,7 +178,7 @@ var script$1 = {
     iconNext: {
       type: String,
       default: () => {
-        return getValueByPath(config, 'pagination.iconNext', 'chevron-right');
+        return helpers.getValueByPath(plugins.config, 'pagination.iconNext', 'chevron-right');
       }
     },
     ariaNextLabel: String,
@@ -451,7 +453,7 @@ var __vue_staticRenderFns__$1 = [];
   
 
   
-  const __vue_component__$1 = /*#__PURE__*/normalizeComponent(
+  const __vue_component__$1 = /*#__PURE__*/plugins.normalizeComponent(
     { render: __vue_render__$1, staticRenderFns: __vue_staticRenderFns__$1 },
     __vue_inject_styles__$1,
     __vue_script__$1,
@@ -464,4 +466,5 @@ var __vue_staticRenderFns__$1 = [];
     undefined
   );
 
-export { __vue_component__$1 as _, __vue_component__ as a };
+exports.__vue_component__ = __vue_component__$1;
+exports.__vue_component__$1 = __vue_component__;

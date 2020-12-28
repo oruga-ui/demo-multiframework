@@ -1,7 +1,9 @@
-import { getValueByPath } from './helpers.js';
-import { B as BaseComponentMixin, c as config, n as normalizeComponent } from './plugins-0f57a139.js';
-import { _ as __vue_component__$1 } from './Icon-9c2a6c7e.js';
-import { F as FormElementMixin } from './FormElementMixin-8e233259.js';
+'use strict';
+
+var helpers = require('./helpers.js');
+var plugins = require('./plugins-3f7829d9.js');
+var Icon = require('./Icon-5b4af0b7.js');
+var FormElementMixin = require('./FormElementMixin-2354d5ae.js');
 
 //
 /**
@@ -14,9 +16,9 @@ import { F as FormElementMixin } from './FormElementMixin-8e233259.js';
 var script = {
   name: 'OInput',
   components: {
-    [__vue_component__$1.name]: __vue_component__$1
+    [Icon.__vue_component__.name]: Icon.__vue_component__
   },
-  mixins: [BaseComponentMixin, FormElementMixin],
+  mixins: [plugins.BaseComponentMixin, FormElementMixin.FormElementMixin],
   configField: 'input',
   inheritAttrs: false,
 
@@ -61,7 +63,7 @@ var script = {
     hasCounter: {
       type: Boolean,
       default: () => {
-        return getValueByPath(config, 'input.counter', false);
+        return helpers.getValueByPath(plugins.config, 'input.counter', false);
       }
     },
 
@@ -94,7 +96,7 @@ var script = {
     return {
       newValue: this.value,
       newType: this.type,
-      newAutocomplete: this.autocomplete || getValueByPath(config, 'input.autocompletete', 'off'),
+      newAutocomplete: this.autocomplete || helpers.getValueByPath(plugins.config, 'input.autocompletete', 'off'),
       isPasswordVisible: false
     };
   },
@@ -283,7 +285,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  const __vue_component__ = /*#__PURE__*/normalizeComponent(
+  const __vue_component__ = /*#__PURE__*/plugins.normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -296,4 +298,4 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-export { __vue_component__ as _ };
+exports.__vue_component__ = __vue_component__;

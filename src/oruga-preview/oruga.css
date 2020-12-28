@@ -503,13 +503,15 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  line-height: 1.25;
+  line-height: 1.5;
   margin-right: 0.5em;
   /* REMOVE ON LITE */
   /* --- */
 }
 .o-chk input[type=checkbox] {
-  margin-top: 0.25em;
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0;
   vertical-align: top;
   background-repeat: no-repeat;
   background-position: center;
@@ -523,8 +525,6 @@ html {
 .o-chk__check {
   flex-shrink: 0;
   background-repeat: no-repeat;
-  width: 1.25em;
-  height: 1.25em;
   background: #445e00;
   border-radius: 4px;
   border-width: 2px;
@@ -1268,11 +1268,18 @@ html {
   /* --- */
 }
 .o-radio input[type=radio] {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  outline: none;
-  z-index: -1;
+  width: 1.25em;
+  height: 1.25em;
+  margin: 0;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 .o-radio__check {
   border-radius: 50%;
@@ -1281,8 +1288,6 @@ html {
   transition-property: background;
   transition-duration: 150ms;
   transition-timing-function: ease-out;
-  width: 1.25em;
-  height: 1.25em;
   background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='100%25' viewBox='0 0 100 100' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xml:space='preserve' xmlns:serif='http://www.serif.com/' style='fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;'%3E%3Cg transform='matrix(10.1032,0,0,10.1032,-255.068,-313.298)'%3E%3Ccircle cx='30.195' cy='35.959' r='4.85' style='fill:%23445e00;'/%3E%3C/g%3E%3C/svg%3E");
 }
 .o-radio__check--checked {

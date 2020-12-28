@@ -1,7 +1,7 @@
 'use strict';
 
 var helpers = require('./helpers.js');
-var plugins = require('./plugins-75a06b83.js');
+var plugins = require('./plugins-3f7829d9.js');
 
 const mdiIcons = {
   sizes: {

@@ -17,6 +17,6 @@ Vue.component('vue-fontawesome', FontAwesomeIcon);
 Vue.component('oruga-form', OrugaForm);
 
 new Vue({
-    router,
-    render: h => h(App)
+  router,
+  render: h => h(App)
 }).$mount('#app')

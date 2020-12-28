@@ -3,10 +3,10 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('./helpers.js');
-var plugins = require('./plugins-75a06b83.js');
-require('./Icon-8c5f2b35.js');
-require('./FormElementMixin-9944c370.js');
-var Select = require('./Select-abbc7d4f.js');
+var plugins = require('./plugins-3f7829d9.js');
+require('./Icon-5b4af0b7.js');
+require('./FormElementMixin-2354d5ae.js');
+var Select = require('./Select-6a5b35fa.js');
 
 const Plugin = {
   install(Vue) {

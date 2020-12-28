@@ -1,9 +1,7 @@
-'use strict';
-
-var helpers = require('./helpers.js');
-var plugins = require('./plugins-75a06b83.js');
-var Icon = require('./Icon-8c5f2b35.js');
-var FormElementMixin = require('./FormElementMixin-9944c370.js');
+import { getValueByPath } from './helpers.js';
+import { B as BaseComponentMixin, c as config, n as normalizeComponent } from './plugins-3fa0f67b.js';
+import { _ as __vue_component__$1 } from './Icon-60401233.js';
+import { F as FormElementMixin } from './FormElementMixin-4e63eba5.js';
 
 //
 /**
@@ -16,9 +14,9 @@ var FormElementMixin = require('./FormElementMixin-9944c370.js');
 var script = {
   name: 'OInput',
   components: {
-    [Icon.__vue_component__.name]: Icon.__vue_component__
+    [__vue_component__$1.name]: __vue_component__$1
   },
-  mixins: [plugins.BaseComponentMixin, FormElementMixin.FormElementMixin],
+  mixins: [BaseComponentMixin, FormElementMixin],
   configField: 'input',
   inheritAttrs: false,
 
@@ -63,7 +61,7 @@ var script = {
     hasCounter: {
       type: Boolean,
       default: () => {
-        return helpers.getValueByPath(plugins.config, 'input.counter', false);
+        return getValueByPath(config, 'input.counter', false);
       }
     },
 
@@ -96,7 +94,7 @@ var script = {
     return {
       newValue: this.value,
       newType: this.type,
-      newAutocomplete: this.autocomplete || helpers.getValueByPath(plugins.config, 'input.autocompletete', 'off'),
+      newAutocomplete: this.autocomplete || getValueByPath(config, 'input.autocompletete', 'off'),
       isPasswordVisible: false
     };
   },
@@ -285,7 +283,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  const __vue_component__ = /*#__PURE__*/plugins.normalizeComponent(
+  const __vue_component__ = /*#__PURE__*/normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -298,4 +296,4 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-exports.__vue_component__ = __vue_component__;
+export { __vue_component__ as _ };
