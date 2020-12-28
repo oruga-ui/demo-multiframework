@@ -4,7 +4,7 @@
       <o-step-item step="1" label="Profile">
         <h2 class="o-demo__title">Fill your profile information</h2>
         <div class="">
-          <o-field :message="messages.name" variant="danger">
+          <o-field :message="messages.name" :variant="messages.name ? 'danger' : ''">
             <o-dropdown aria-role="list" v-model="currentMenu">
               <o-button
                 variant="primary"
