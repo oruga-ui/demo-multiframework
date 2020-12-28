@@ -19,8 +19,9 @@ Vue.use(Oruga, {
   statusIcon: false,
   button: {
     rootClass: 'btn',
+    variantClass: 'btn-',
     roundedClass: 'btn-rounded',
-    outlinedClass: 'btn-outlined',
+    outlinedClass: 'btn-outlined-',
     disabledClass: 'btn-disabled'
   },
   field: {

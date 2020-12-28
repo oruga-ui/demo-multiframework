@@ -48,7 +48,7 @@
 .o-demo__navigation-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .o-demo-form__activate-button-wrapper {

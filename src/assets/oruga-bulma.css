@@ -18,6 +18,10 @@
 
 }
 
+.step-divider {
+  background: #b5b5b5;
+}
+
 .steps-nav-item-active .step-marker {
   color: #00d1b2;
   border-color: #00d1b2;
