@@ -104,11 +104,9 @@
 
       <o-step-item label="Finish" step="3">
         <h1 class="title has-text-centered">You're done!</h1>
-        🎉 Your account setup is complete! Click on the button below to complete
-        the process
         <div class="o-demo-form__activate-button-wrapper">
           <o-button outlined variant="primary" @click="activateAccount"
-            >Activate account</o-button
+            >Click to activate account</o-button
           >
         </div>
         <p style="position: relative">
@@ -197,6 +195,7 @@ export default {
     activateAccount() {
       this.isLoading = true;
       setTimeout(() => {
+        location.reload();
         this.isLoading = false;
       }, 3 * 1000);
     },
