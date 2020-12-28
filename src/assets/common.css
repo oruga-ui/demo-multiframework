@@ -1,7 +1,6 @@
 .navigation {
     display: flex;
     justify-content: space-evenly;
-    margin: 1rem;
     margin-bottom: 2rem;
     background-color: cadetblue;
 }

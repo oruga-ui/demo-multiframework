@@ -10,8 +10,7 @@ import '@/assets/material.css';
 
 import Vue from 'vue'
 
-// @ts-ignore
-import Oruga from '@oruga-ui/oruga'
+import Oruga from '@/oruga-preview/oruga'
 
 Vue.use(Oruga, {
     iconPack: 'fas',

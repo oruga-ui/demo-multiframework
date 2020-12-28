@@ -63,7 +63,7 @@
 /* Checkbox */
 
 .checkbox {
-  @apply appearance-none bg-blue-900 border-gray-100;
+  @apply appearance-none bg-blue-900 border-blue-500;
 }
 
 .checkbox-checked {
@@ -72,7 +72,24 @@
 
 /* Steps */
 
-.steps-marker {
-  background-color: red;
-  border-color: aqua;
+.steps-nav-item-active {
+
+}
+
+.steps-nav-item-active .step-marker {
+  @apply text-blue-500 border-blue-500;
+}
+
+.steps-nav-item-active .step-divider {
+  background: none;
+  @apply bg-blue-500;
+}
+
+.steps-nav-item-previous .step-marker {
+  @apply bg-blue-500;
+}
+
+.steps-nav-item-previous .step-divider {
+  background: none;
+  @apply bg-blue-500;
 }

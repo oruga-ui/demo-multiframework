@@ -11,8 +11,7 @@ import '@/assets/oruga-tailwindcss.css';
 
 import Vue from 'vue'
 
-// @ts-ignore
-import Oruga from '@oruga-ui/oruga'
+import Oruga from '@/oruga-preview/oruga'
 
 Vue.use(Oruga, {
     iconPack: 'fas',
@@ -45,9 +44,12 @@ Vue.use(Oruga, {
         menuClass: 'dropdown-menu',
         itemClass: 'dropdown-item'
     },
-    // steps: {
-    //   itemActiveClass: 'steps-marker'
-    // }
+    steps: {
+      itemActiveClass: 'steps-nav-item-active',
+      itemPreviousClass: 'steps-nav-item-previous',
+      stepMarkerClass: 'step-marker',
+      stepDividerClass: 'step-divider',
+    }
 })
 
 export default {
