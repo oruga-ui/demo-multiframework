@@ -44,8 +44,9 @@ Vue.use(Oruga, {
       stepDividerClass: 'step-divider',
     },
     checkbox: {
-      checkClass: 'checkbox',
-      checkCheckedClass: 'checkbox-checked'
+      override: true,
+      rootClass: 'checkbox',
+      labelClass: 'checkbox-label',
     },
 })
 

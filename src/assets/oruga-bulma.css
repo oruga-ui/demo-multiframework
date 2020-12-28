@@ -36,3 +36,7 @@
   background: none;
   background: #00d1b2;
 }
+
+.checkbox-label {
+  margin-left: 0.2rem;
+}
