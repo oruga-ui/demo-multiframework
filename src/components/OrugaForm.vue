@@ -34,28 +34,65 @@
           </o-field>
         </div>
 
-        <o-field grouped label="Work information">
-          <o-input name="company" placeholder="Company" expanded></o-input>
-          <o-input name="email" placeholder="Email" expanded></o-input>
+        <o-field label="Work information">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 49.5% 49.5%;
+              justify-content: space-between;
+            "
+          >
+            <o-input name="company" placeholder="Company" expanded></o-input>
+            <o-input name="email" placeholder="Email" expanded></o-input>
+          </div>
         </o-field>
 
-        <o-field grouped label="Address">
-          <o-input name="street" placeholder="Street" expanded></o-input>
-          <o-input name="zip" placeholder="Zip Code" expanded></o-input>
-          <o-input name="country" placeholder="Country" expanded></o-input>
+        <o-field label="Address">
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 33% 33% 33%;
+              justify-content: space-between;
+            "
+          >
+            <o-input name="street" placeholder="Street" expanded></o-input>
+            <o-input name="zip" placeholder="Zip Code" expanded></o-input>
+            <o-input name="country" placeholder="Country" expanded></o-input>
+          </div>
         </o-field>
-
-        <o-field label="I need visitors to consent to the following agreements" variant="danger" :message="messages.privacyTerms" grouped>
-          <o-checkbox v-model="privacy">Privacy Policy</o-checkbox>
-          <o-checkbox v-model="terms">Terms and Conditions</o-checkbox>
+        <o-field
+          label="I need visitors to consent to the following agreements"
+          variant="danger"
+          :message="messages.privacyTerms"
+        >
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 49.5% 49.5%;
+              justify-content: space-between;
+            "
+          >
+            <o-checkbox v-model="privacy">Privacy Policy</o-checkbox>
+            <o-checkbox v-model="terms">Terms and Conditions</o-checkbox>
+          </div>
         </o-field>
       </o-step-item>
 
       <o-step-item step="2" label="Account">
         <h1 class="title has-text-centered">Create an account</h1>
         <div class="">
-          <o-field label="Username" label-for="username" :message="messages.username" variant="danger">
-            <o-input v-model="username" id="username" type="text" placeholder="Username" />
+          <o-field
+            label="Username"
+            label-for="username"
+            :message="messages.username"
+            variant="danger"
+          >
+            <o-input
+              v-model="username"
+              id="username"
+              type="text"
+              placeholder="Username"
+            />
           </o-field>
         </div>
         <div class="">
@@ -84,14 +121,14 @@
         </div>
       </o-step-item>
 
-      <o-step-item label="Finish" step=3>
+      <o-step-item label="Finish" step="3">
         <h1 class="title has-text-centered">You're done!</h1>
         🎉 Your account setup is complete! Click on the button below to complete
         the process
-        <div class="o-demo-form__activate-button-wrapper ">
-          <o-button
-            @click="activateAccount"
-          >Activate account</o-button>
+        <div class="o-demo-form__activate-button-wrapper">
+          <o-button outlined variant="primary" @click="activateAccount"
+            >Activate account</o-button
+          >
         </div>
         <p style="position: relative">
           <o-loading full-page :active.sync="isLoading">
@@ -121,7 +158,6 @@
         </div>
       </template>
     </o-steps>
-    <form class="o-demo-form"></form>
   </section>
 </template>
 
@@ -147,7 +183,7 @@ export default {
   },
   methods: {
     isAValidStep(stepNumber) {
-      this.messages = {}
+      this.messages = {};
       switch (stepNumber) {
         case 1:
           if (this.name === "") {
@@ -169,7 +205,7 @@ export default {
           }
           break;
       }
-      this.messages = Object.assign({}, {...this.messages})
+      this.messages = Object.assign({}, { ...this.messages });
       return Object.keys(this.messages).length === 0;
     },
     goNextIfStepIsValid(action) {
@@ -178,11 +214,11 @@ export default {
       }
     },
     activateAccount() {
-      this.isLoading = true
+      this.isLoading = true;
       setTimeout(() => {
-        this.isLoading = false
-      }, 3 * 1000)
-    }
+        this.isLoading = false;
+      }, 3 * 1000);
+    },
   },
 };
 </script>
