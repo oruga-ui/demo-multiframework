@@ -4,7 +4,7 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 require('./helpers.js');
 var plugins = require('./plugins-3f7829d9.js');
-var Field = require('./Field-71fda487.js');
+var Field = require('./Field-e913afc7.js');
 
 const Plugin = {
   install(Vue) {

@@ -16,7 +16,7 @@ var checkbox = require('./checkbox.js');
 var collapse = require('./collapse.js');
 require('./trapFocus-8381ef46.js');
 var dropdown = require('./dropdown.js');
-require('./Field-71fda487.js');
+require('./Field-e913afc7.js');
 var field = require('./field.js');
 var icon = require('./icon.js');
 var input = require('./input.js');

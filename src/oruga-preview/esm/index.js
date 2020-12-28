@@ -18,7 +18,7 @@ export { default as Collapse } from './collapse.js';
 import './trapFocus-25a621e6.js';
 import Plugin$4 from './dropdown.js';
 export { default as Dropdown } from './dropdown.js';
-import './Field-259d096b.js';
+import './Field-5738e8fa.js';
 import Plugin$5 from './field.js';
 export { default as Field } from './field.js';
 import Plugin$6 from './icon.js';

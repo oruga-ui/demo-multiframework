@@ -2112,6 +2112,7 @@ use(Plugin$3);
  * An easy way to toggle what you want
  * @displayName Collapse
  * @example ./examples/Collapse.md
+ * @style _collapse.scss
  */
 
 var script$5 = {
@@ -3228,7 +3229,7 @@ var script$9 = {
 const __vue_script__$9 = script$9;
 
 /* template */
-var __vue_render__$7 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.rootClasses},[(_vm.horizontal)?_c('div',{class:_vm.labelHorizontalClasses},[(_vm.hasLabel)?_c('label',{class:_vm.labelClasses,attrs:{"for":_vm.labelFor}},[(_vm.hasLabelSlot)?_vm._t("label"):[_vm._v(_vm._s(_vm.label))]],2):_vm._e()]):[(_vm.hasLabel)?_c('label',{class:_vm.labelClasses,attrs:{"for":_vm.labelFor}},[(_vm.hasLabelSlot)?_vm._t("label"):[_vm._v(_vm._s(_vm.label))]],2):_vm._e()],(_vm.horizontal)?_c('o-field-body',[_vm._t("default")],2):(_vm.hasInnerField)?_c('div',{class:_vm.bodyClasses},[_c('o-field',{class:_vm.innerFieldClasses,attrs:{"addons":false}},[_vm._t("default")],2)],1):[_vm._t("default")],(_vm.hasMessage && !_vm.horizontal)?_c('p',{class:_vm.messageClasses},[(_vm.hasMessageSlot)?_vm._t("message"):[_vm._v(_vm._s(_vm.message))]],2):_vm._e()],2)};
+var __vue_render__$7 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.rootClasses},[(_vm.horizontal)?_c('div',{class:_vm.labelHorizontalClasses},[(_vm.hasLabel)?_c('label',{class:_vm.labelClasses,attrs:{"for":_vm.labelFor}},[(_vm.hasLabelSlot)?_vm._t("label"):[_vm._v(_vm._s(_vm.label))]],2):_vm._e()]):[(_vm.hasLabel)?_c('label',{class:_vm.labelClasses,attrs:{"for":_vm.labelFor}},[(_vm.hasLabelSlot)?_vm._t("label"):[_vm._v(_vm._s(_vm.label))]],2):_vm._e()],(_vm.horizontal)?_c('o-field-body',[_vm._t("default")],2):(_vm.hasInnerField)?_c('div',{class:_vm.bodyClasses},[_c('o-field',{class:_vm.innerFieldClasses,attrs:{"addons":false,"variant":_vm.newVariant}},[_vm._t("default")],2)],1):[_vm._t("default")],(_vm.hasMessage && !_vm.horizontal)?_c('p',{class:_vm.messageClasses},[(_vm.hasMessageSlot)?_vm._t("message"):[_vm._v(_vm._s(_vm.message))]],2):_vm._e()],2)};
 var __vue_staticRenderFns__$7 = [];
 
   /* style */

@@ -10,7 +10,7 @@ var Input = require('./Input-a0188fd0.js');
 var Button = require('./Button-426e131d.js');
 require('./CheckRadioMixin-b0946540.js');
 var Checkbox = require('./Checkbox-e9020abb.js');
-var Field = require('./Field-71fda487.js');
+var Field = require('./Field-e913afc7.js');
 require('./ssr-39c7e185.js');
 var Loading = require('./Loading-14b137fc.js');
 var Pagination = require('./Pagination-08a25ba4.js');

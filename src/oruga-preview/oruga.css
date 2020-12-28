@@ -511,6 +511,7 @@ html {
 .o-chk input[type=checkbox] {
   width: 1.5em;
   height: 1.5em;
+  outline: none;
   margin: 0;
   vertical-align: top;
   background-repeat: no-repeat;
@@ -524,6 +525,7 @@ html {
 }
 .o-chk__check {
   flex-shrink: 0;
+  cursor: pointer;
   background-repeat: no-repeat;
   background: #445e00;
   border-radius: 4px;
@@ -1272,6 +1274,7 @@ html {
   height: 1.25em;
   margin: 0;
   vertical-align: top;
+  outline: none;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

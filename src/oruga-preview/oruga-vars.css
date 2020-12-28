@@ -511,6 +511,7 @@ html {
 .o-chk input[type=checkbox] {
   width: var(--oruga-checkbox-size, 1.5em);
   height: var(--oruga-checkbox-size, 1.5em);
+  outline: none;
   margin: 0;
   vertical-align: top;
   background-repeat: no-repeat;
@@ -524,6 +525,7 @@ html {
 }
 .o-chk__check {
   flex-shrink: 0;
+  cursor: pointer;
   background-repeat: no-repeat;
   background: var(--oruga-checkbox-background-color, #445e00);
   border-radius: var(--oruga-checkbox-border-radius, 4px);
@@ -1272,6 +1274,7 @@ html {
   height: var(--oruga-radio-size, 1.25em);
   margin: 0;
   vertical-align: top;
+  outline: none;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

@@ -9,6 +9,7 @@ var plugins = require('./plugins-3f7829d9.js');
  * An easy way to toggle what you want
  * @displayName Collapse
  * @example ./examples/Collapse.md
+ * @style _collapse.scss
  */
 
 var script = {

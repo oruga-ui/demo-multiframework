@@ -5,6 +5,7 @@ import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as reg
  * An easy way to toggle what you want
  * @displayName Collapse
  * @example ./examples/Collapse.md
+ * @style _collapse.scss
  */
 
 var script = {

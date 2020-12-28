@@ -405,6 +405,7 @@ html {
   /* --- */
 }
 .o-chk input[type=checkbox] {
+  outline: none;
   margin: 0;
   vertical-align: top;
   background-repeat: no-repeat;
@@ -418,6 +419,7 @@ html {
 }
 .o-chk__check {
   flex-shrink: 0;
+  cursor: pointer;
   background-repeat: no-repeat;
   border-style: solid;
   transition-property: background;
@@ -886,6 +888,7 @@ html {
 .o-radio input[type=radio] {
   margin: 0;
   vertical-align: top;
+  outline: none;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
