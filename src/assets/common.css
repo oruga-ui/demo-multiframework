@@ -38,10 +38,31 @@
     min-height: 50vh;
 }
 
+.o-demo-form__field-2-col {
+  grid-template-columns: 100%;
+  row-gap: 0.5rem;
+}
+
+.o-demo-form__field-3-col {
+  grid-template-columns: 100%;
+  row-gap: 0.5rem;
+}
+
 @media (min-width: 768px) {
   .o-demo-form {
     padding-left: 14vw;
     padding-right: 14vw;
+  }
+  .o-demo-form__field-2-col {
+    display: grid;
+    grid-template-columns: 49.5% 49.5%;
+    justify-content: space-between;
+  }
+
+  .o-demo-form__field-3-col {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    justify-content: space-between;
   }
 }
 

@@ -3,7 +3,6 @@
     <o-steps v-model="currentStep" stepContentClass="o-demo-form">
       <o-step-item step="1" label="Profile">
         <h2 class="o-demo__title">Fill your profile information</h2>
-        <div class="">
           <o-field :message="messages.name" :variant="messages.name ? 'danger' : ''">
             <o-dropdown aria-role="list" v-model="currentMenu">
               <o-button
@@ -32,29 +31,16 @@
               expanded
             />
           </o-field>
-        </div>
 
         <o-field label="Work information">
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 49.5% 49.5%;
-              justify-content: space-between;
-            "
-          >
+          <div class="o-demo-form__field-2-col">
             <o-input name="company" placeholder="Company" expanded></o-input>
             <o-input name="email" placeholder="Email" expanded></o-input>
           </div>
         </o-field>
 
         <o-field label="Address">
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 33% 33% 33%;
-              justify-content: space-between;
-            "
-          >
+          <div class="o-demo-form__field-3-col">
             <o-input name="street" placeholder="Street" expanded></o-input>
             <o-input name="zip" placeholder="Zip Code" expanded></o-input>
             <o-input name="country" placeholder="Country" expanded></o-input>
@@ -65,13 +51,7 @@
           variant="danger"
           :message="messages.privacyTerms"
         >
-          <div
-            style="
-              display: grid;
-              grid-template-columns: 49.5% 49.5%;
-              justify-content: space-between;
-            "
-          >
+          <div class="o-demo-form__field-2-col">
             <o-checkbox v-model="privacy">Privacy Policy</o-checkbox>
             <o-checkbox v-model="terms">Terms and Conditions</o-checkbox>
           </div>
@@ -85,7 +65,7 @@
             label="Username"
             label-for="username"
             :message="messages.username"
-            variant="danger"
+            :variant="messages.username ? 'danger' : ''"
           >
             <o-input
               v-model="username"
@@ -99,24 +79,25 @@
           <o-field
             label="Password"
             label-for="password"
-            variant="danger"
+            :variant="messages.password ? 'danger' : ''"
             :message="messages.password"
-            grouped
           >
-            <o-input
-              v-model="password"
-              id="password"
-              type="password"
-              placeholder="Password"
-              expanded
-            />
-            <o-input
-              v-model="passwordCheck"
-              id="repeat-password"
-              type="password"
-              placeholder="Repeat assword"
-              expanded
-            />
+            <div class="o-demo-form__field-2-col">
+              <o-input
+                v-model="password"
+                id="password"
+                type="password"
+                placeholder="Password"
+                expanded
+              />
+              <o-input
+                v-model="passwordCheck"
+                id="repeat-password"
+                type="password"
+                placeholder="Repeat assword"
+                expanded
+              />
+            </div>
           </o-field>
         </div>
       </o-step-item>

@@ -2,9 +2,9 @@
   flex-wrap: wrap;
 }
 
-.o-field .form-control {
+/* .o-field .form-control {
   margin-bottom: 0.5rem;
-}
+} */
 
 @media (min-width: 768px) {
   .field--grouped {
