@@ -11,7 +11,7 @@
 export default {
   data: function () {
     return {
-      frameworks : ['Tailwind', 'Bootstrap', 'Bulma', 'Material']
+      frameworks : ['Tailwind', 'Bootstrap', 'Bulma']
     }
   },
   methods: {

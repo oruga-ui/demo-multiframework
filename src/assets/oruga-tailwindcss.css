@@ -35,7 +35,6 @@
   .field--grouped {
     @apply flex-no-wrap;
   }
-
 }
 
 /* Input */
@@ -51,9 +50,8 @@
     @apply inline-flex relative;
 }
 .dropdown-menu {
-    top: 100%;
     min-width: 12em;
-    @apply absolute bg-white left-0 m-0 px-2 shadow-lg rounded-sm z-10;
+    @apply bg-white px-2 shadow-lg rounded-sm ;
 }
 .dropdown-item {
     @apply relative block no-underline px-1 py-2 cursor-pointer;

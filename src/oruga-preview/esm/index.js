@@ -10,7 +10,7 @@ import './Button-8e0a7d0b.js';
 import Plugin$1 from './button.js';
 export { default as Button } from './button.js';
 import './CheckRadioMixin-e43b9266.js';
-import './Checkbox-66bdcc3c.js';
+import './Checkbox-f25aabb9.js';
 import Plugin$2 from './checkbox.js';
 export { default as Checkbox } from './checkbox.js';
 import Plugin$3 from './collapse.js';

@@ -11,7 +11,7 @@ var autocomplete = require('./autocomplete.js');
 require('./Button-5b39a859.js');
 var button = require('./button.js');
 require('./CheckRadioMixin-b0946540.js');
-require('./Checkbox-f00964c3.js');
+require('./Checkbox-e0b33f3c.js');
 var checkbox = require('./checkbox.js');
 var collapse = require('./collapse.js');
 require('./trapFocus-8381ef46.js');

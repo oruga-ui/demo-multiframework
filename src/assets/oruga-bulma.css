@@ -1,0 +1,38 @@
+.field--grouped {
+  flex-wrap: wrap;
+}
+
+.o-field .input {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .field--grouped {
+    flex-wrap: nowrap;
+  }
+}
+
+/* Steps */
+
+.steps-nav-item-active {
+
+}
+
+.steps-nav-item-active .step-marker {
+  color: #00d1b2;
+  border-color: #00d1b2;
+}
+
+.steps-nav-item-active .step-divider {
+  background: none;
+  background: #00d1b2;
+}
+
+.steps-nav-item-previous .step-marker {
+  background: #00d1b2;
+}
+
+.steps-nav-item-previous .step-divider {
+  background: none;
+  background: #00d1b2;
+}

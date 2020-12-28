@@ -1,3 +1,4 @@
+/*! Oruga v0.2.2 | MIT License | github.com/oruga-ui/oruga */
 @charset "UTF-8";
 @keyframes fadeOut {
   from {
@@ -508,11 +509,16 @@ html {
   /* --- */
 }
 .o-chk input[type=checkbox] {
-  position: absolute;
-  left: 0;
-  opacity: 0;
-  outline: none;
-  z-index: -1;
+  margin-top: 0.25em;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
 }
 .o-chk__check {
   flex-shrink: 0;
@@ -2955,5 +2961,3 @@ html {
   cursor: pointer;
   z-index: -1;
 }
-
-/*# sourceMappingURL=oruga-vars.css.map */

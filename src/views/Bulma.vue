@@ -7,6 +7,7 @@
 <script>
 
 import '@/assets/bulma.css';
+import '@/assets/oruga-bulma.css';
 
 import Vue from 'vue'
 
@@ -17,32 +18,35 @@ Vue.use(Oruga, {
     iconComponent: 'vue-fontawesome',
     statusIcon: false,
     button: {
-        rootClass: 'button',
+        rootClass: 'button is-primary',
         outlinedClass: 'is-outlined',
         disabledClass: 'btn-disabled'
     },
     field: {
-        rootClass: 'field',
-        labelClass: 'label',
-        messageClass: 'form-text',
-        variantClass: 'field-'
+      groupedClass: 'field--grouped',
+      rootClass: 'field',
+      labelClass: 'label',
+      messageClass: 'form-text',
+      variantClass: 'field-'
     },
     input: {
-        inputClass: 'input is-static',
-        variantClass: ''
+        inputClass: 'input',
     },
     dropdown: {
-        override: true,
         rootClass: 'dropdown is-active',
-        menuClass: 'dropdown-menu dropdown-content',
-        itemClass: 'dropdown-item'
-    },
-    'dropdown-item': {
-        override: true,
+        itemClass: 'dropdown-item',
         itemActiveClass: 'is-active'
     },
-    icon: {
-    }
+    steps: {
+      itemActiveClass: 'steps-nav-item-active',
+      itemPreviousClass: 'steps-nav-item-previous',
+      stepMarkerClass: 'step-marker',
+      stepDividerClass: 'step-divider',
+    },
+    checkbox: {
+      checkClass: 'checkbox',
+      checkCheckedClass: 'checkbox-checked'
+    },
 })
 
 export default {

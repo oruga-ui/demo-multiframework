@@ -22,11 +22,11 @@ const routes: Array<RouteConfig> = [
     name: 'Bulma',
     component: () => import('../views/Bulma.vue')
   },
-  {
-    path: '/Material',
-    name: 'Material',
-    component: () => import('../views/Material.vue')
-  }
+  // {
+  //   path: '/Material',
+  //   name: 'Material',
+  //   component: () => import('../views/Material.vue')
+  // }
 ]
 
 const router = new VueRouter({

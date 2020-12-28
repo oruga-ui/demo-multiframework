@@ -37,8 +37,16 @@ Vue.use(Oruga, {
         menuClass: 'dropdown-menu show',
         itemClass: 'dropdown-item'
     },
-    icon: {
-    }
+    steps: {
+      itemActiveClass: 'steps-nav-item-active',
+      itemPreviousClass: 'steps-nav-item-previous',
+      stepMarkerClass: 'step-marker',
+      stepDividerClass: 'step-divider',
+    },
+    checkbox: {
+      checkClass: 'checkbox',
+      checkCheckedClass: 'checkbox-checked'
+    },
 })
 
 export default {

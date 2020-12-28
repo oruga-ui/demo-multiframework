@@ -7,6 +7,7 @@
 <script>
 
 import '@/assets/bootstrap.css';
+import '@/assets/oruga-bootstrap.css';
 
 import Vue from 'vue'
 
@@ -17,27 +18,34 @@ Vue.use(Oruga, {
     iconComponent: 'vue-fontawesome',
     statusIcon: false,
     button: {
-        rootClass: 'btn',
+        rootClass: 'btn btn-primary',
         outlinedClass: 'btn-outline-primary',
         disabledClass: 'btn-disabled'
     },
     field: {
-        labelClass: 'form-label',
-        messageClass: 'form-text',
-        variantClass: 'field-'
+      groupedClass: 'field--grouped',
+      labelClass: 'form-label',
+      messageClass: 'form-text',
+      variantClass: 'field-'
     },
     input: {
         inputClass: 'form-control',
         variantClass: 'input-'
     },
     dropdown: {
-        override: true,
         rootClass: 'dropdown',
-        menuClass: 'dropdown-menu show',
         itemClass: 'dropdown-item'
     },
-    icon: {
-    }
+    steps: {
+      itemActiveClass: 'steps-nav-item-active',
+      itemPreviousClass: 'steps-nav-item-previous',
+      stepMarkerClass: 'step-marker',
+      stepDividerClass: 'step-divider',
+    },
+    checkbox: {
+      checkClass: 'form-check-input',
+      labelClass: 'form-check-label'
+    },
 })
 
 export default {

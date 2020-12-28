@@ -5,7 +5,7 @@ import './FormElementMixin-8e233259.js';
 import { _ as __vue_component__$9 } from './Input-e5c9c352.js';
 import { _ as __vue_component__$4 } from './Button-8e0a7d0b.js';
 import './CheckRadioMixin-e43b9266.js';
-import { _ as __vue_component__$8 } from './Checkbox-66bdcc3c.js';
+import { _ as __vue_component__$8 } from './Checkbox-f25aabb9.js';
 import { _ as __vue_component__$7 } from './Field-033e276e.js';
 import './ssr-1ee179b4.js';
 import { _ as __vue_component__$b } from './Loading-059e5855.js';

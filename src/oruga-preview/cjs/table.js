@@ -9,7 +9,7 @@ require('./FormElementMixin-9944c370.js');
 var Input = require('./Input-fe6c1f0d.js');
 var Button = require('./Button-5b39a859.js');
 require('./CheckRadioMixin-b0946540.js');
-var Checkbox = require('./Checkbox-f00964c3.js');
+var Checkbox = require('./Checkbox-e0b33f3c.js');
 var Field = require('./Field-4a14213c.js');
 require('./ssr-39c7e185.js');
 var Loading = require('./Loading-eaeb412c.js');

@@ -39,7 +39,6 @@ Vue.use(Oruga, {
       checkCheckedClass: 'checkbox-checked'
     },
     dropdown: {
-        override: true,
         rootClass: 'dropdown',
         menuClass: 'dropdown-menu',
         itemClass: 'dropdown-item'
