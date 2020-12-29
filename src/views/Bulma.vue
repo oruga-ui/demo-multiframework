@@ -19,7 +19,7 @@ Vue.use(Oruga, {
   statusIcon: true,
   button: {
     rootClass: 'button',
-    outlinedClass: (variant) => {
+    outlinedClass: () => {
       return 'is-outlined' // Outline class does not dependent on variants
     },
     disabledClass: 'btn-disabled',
