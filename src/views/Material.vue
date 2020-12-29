@@ -43,6 +43,7 @@ Vue.use(Oruga, {
   },
   dropdown: {
     rootClass: 'dropdown',
+    //menuClass: 'dropdown-menu show',
     itemClass: 'dropdown-item',
     itemActiveClass: 'active'
   },

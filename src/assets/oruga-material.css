@@ -1,3 +1,19 @@
+/* Dropdown */
+
+.dropdown-item {
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  min-width: 7rem;
+  min-height: 3rem;
+  padding: 0.8rem 1rem;
+  overflow: hidden;
+  line-height: 1;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}
+
 /* Buttons */
 
 .btn {
@@ -29,6 +45,8 @@
   background: var(--primary);
 }
 
+/* Checkbox */
+
 .form-check {
   width: 1.2rem;
   height: 1.2rem;
@@ -44,7 +62,7 @@
 .form-check:hover:after {
   content: "";
   border-radius: 50%;
-  opacity: .2;
+  opacity: 0.2;
   cursor: pointer;
   height: 34px;
   position: absolute;
