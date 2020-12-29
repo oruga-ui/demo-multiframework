@@ -1,7 +1,7 @@
 /* Dropdown */
 
 .is-div-active {
-  background-color: #0d6efd;
+  background-color: var(--bs-primary);
   color: #fff;
 }
 
@@ -19,20 +19,20 @@
 }
 
 .steps-nav-item-active .step-marker {
-  color: #0d6efd;
-  border-color: #0d6efd;
+  color: var(--bs-primary);
+  border-color: var(--bs-primary);
 }
 
 .steps-nav-item-active .step-divider {
   background: none;
-  background: #0d6efd;
+  background: var(--bs-primary);
 }
 
 .steps-nav-item-previous .step-marker {
-  background: #0d6efd;
+  background: var(--bs-primary);
 }
 
 .steps-nav-item-previous .step-divider {
   background: none;
-  background: #0d6efd;
+  background: var(--bs-primary);
 }
