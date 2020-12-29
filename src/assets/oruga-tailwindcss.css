@@ -53,7 +53,7 @@
 /* Checkbox */
 
 .checkbox {
-  @apply appearance-none bg-blue-900 border-blue-500;
+  @apply appearance-none bg-blue-500 border-blue-500;
 }
 
 .checkbox-checked {
