@@ -41,10 +41,10 @@
 }
 .dropdown-menu {
   min-width: 12em;
-  @apply bg-white px-2 shadow-lg rounded-sm ;
+  @apply bg-white shadow-lg rounded-sm ;
 }
 .dropdown-item {
-  @apply relative block no-underline px-1 py-2 cursor-pointer;
+  @apply relative block no-underline py-2 cursor-pointer;
 }
 
 .dropdown-item-active {
