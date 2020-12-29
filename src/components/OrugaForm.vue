@@ -60,46 +60,42 @@
 
       <o-step-item step="2" label="Account">
         <h1 class="title has-text-centered">Create an account</h1>
-        <div class="">
-          <o-field
-            label="Username"
-            label-for="username"
-            :message="messages.username"
-            :variant="messages.username ? 'danger' : ''"
-          >
+        <o-field
+          label="Username"
+          label-for="username"
+          :message="messages.username"
+          :variant="messages.username ? 'danger' : ''"
+        >
+          <o-input
+            v-model="username"
+            id="username"
+            type="text"
+            placeholder="Username"
+          />
+        </o-field>
+        <o-field
+          label="Password"
+          label-for="password"
+          :variant="messages.password ? 'danger' : ''"
+          :message="messages.password"
+        >
+          <div class="o-demo-form__field-2-col">
             <o-input
-              v-model="username"
-              id="username"
-              type="text"
-              placeholder="Username"
+              v-model="password"
+              id="password"
+              type="password"
+              placeholder="Password"
+              expanded
             />
-          </o-field>
-        </div>
-        <div class="">
-          <o-field
-            label="Password"
-            label-for="password"
-            :variant="messages.password ? 'danger' : ''"
-            :message="messages.password"
-          >
-            <div class="o-demo-form__field-2-col">
-              <o-input
-                v-model="password"
-                id="password"
-                type="password"
-                placeholder="Password"
-                expanded
-              />
-              <o-input
-                v-model="passwordCheck"
-                id="repeat-password"
-                type="password"
-                placeholder="Repeat assword"
-                expanded
-              />
-            </div>
-          </o-field>
-        </div>
+            <o-input
+              v-model="passwordCheck"
+              id="repeat-password"
+              type="password"
+              placeholder="Repeat assword"
+              expanded
+            />
+          </div>
+        </o-field>
       </o-step-item>
 
       <o-step-item label="Finish" step="3">
