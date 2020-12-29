@@ -35,11 +35,17 @@ Vue.use(Oruga, {
   },
   input: {
     inputClass: 'form-control',
-    variantClass: 'input-'
+    variantClass: (variant) => {
+      switch (variant) {
+        case 'danger':
+          return 'is-invalid'
+      }
+    }
   },
   dropdown: {
     rootClass: 'dropdown',
-    itemClass: 'dropdown-item'
+    itemClass: 'dropdown-item',
+    itemActiveClass: 'is-div-active'
   },
   steps: {
     itemActiveClass: 'steps-nav-item-active',

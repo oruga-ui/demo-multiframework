@@ -1,15 +1,14 @@
-.field--grouped {
-  flex-wrap: wrap;
+/* Dropdown */
+
+.is-div-active {
+  background-color: #0d6efd;
+  color: #fff;
 }
 
-/* .o-field .form-control {
-  margin-bottom: 0.5rem;
-} */
+/* Field */
 
-@media (min-width: 768px) {
-  .field--grouped {
-    flex-wrap: nowrap;
-  }
+.field-danger.form-text {
+    color: var(--bs-danger);
 }
 
 

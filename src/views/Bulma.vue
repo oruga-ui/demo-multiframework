@@ -34,11 +34,12 @@ Vue.use(Oruga, {
   },
   input: {
     inputClass: 'input',
+    variantClass: 'is-'
   },
   dropdown: {
     rootClass: 'dropdown is-active',
     itemClass: 'dropdown-item',
-    itemActiveClass: 'is-active'
+    itemActiveClass: 'is-div-active'
   },
   steps: {
     itemActiveClass: 'steps-nav-item-active',

@@ -1,13 +1,3 @@
-.field--grouped {
-  flex-wrap: wrap;
-}
-
-@media (min-width: 768px) {
-  .field--grouped {
-    flex-wrap: nowrap;
-  }
-}
-
 /* Steps */
 
 .steps-nav-item-active {
@@ -39,4 +29,11 @@
 
 .checkbox-label {
   margin-left: 0.2rem;
+}
+
+/* Dropdown */
+
+.is-div-active {
+  background-color: #3273dc;
+  color: #fff;
 }

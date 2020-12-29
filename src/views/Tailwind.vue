@@ -25,7 +25,6 @@ Vue.use(Oruga, {
     disabledClass: 'btn-disabled'
   },
   field: {
-    groupedClass: 'field--grouped',
     labelClass: 'field-label',
     messageClass: 'text-xs italic',
     variantClass: 'field-'
@@ -42,7 +41,8 @@ Vue.use(Oruga, {
   dropdown: {
     rootClass: 'dropdown',
     menuClass: 'dropdown-menu',
-    itemClass: 'dropdown-item'
+    itemClass: 'dropdown-item',
+    itemActiveClass: 'dropdown-item-active'
   },
   steps: {
     itemActiveClass: 'steps-nav-item-active',
