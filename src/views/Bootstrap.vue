@@ -16,7 +16,7 @@ import Oruga from '@/oruga-preview/oruga'
 Vue.use(Oruga, {
   iconPack: 'fas',
   iconComponent: 'vue-fontawesome',
-  statusIcon: true,
+  statusIcon: false,
   button: {
     rootClass: 'btn',
     outlinedClass: 'btn-outline-',
