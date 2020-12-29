@@ -1,0 +1,55 @@
+/* Steps */
+
+.steps-nav-item-active {
+
+}
+
+.step-divider {
+  background: #b5b5b5;
+}
+
+.steps-nav-item-active .step-marker {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.steps-nav-item-active .step-divider {
+  background: none;
+  background: var(--primary);
+}
+
+.steps-nav-item-previous .step-marker {
+  background: var(--primary);
+}
+
+.steps-nav-item-previous .step-divider {
+  background: none;
+  background: var(--primary);
+}
+
+.form-check {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-color: var(--gray);
+  background-color: white;
+}
+
+.form-check-checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.form-check:hover:after {
+  content: "";
+  border-radius: 50%;
+  opacity: .2;
+  cursor: pointer;
+  height: 34px;
+  position: absolute;
+  transition: inherit;
+  width: 34px;
+  left: calc(50% - 24px);
+  top: calc(50% - 24px);
+  margin: 7px;
+  background-color: inherit;
+}

@@ -31,6 +31,11 @@ export default {
           path: 'bulma',
           color: '#00d1b2'
         },
+        {
+          name: 'Material',
+          path: 'material',
+          color: '#009688'
+        },
       ]
     }
   },

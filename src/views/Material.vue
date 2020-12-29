@@ -7,6 +7,7 @@
 <script>
 
 import '@/assets/material.css';
+import '@/assets/oruga-material.css';
 
 import Vue from 'vue'
 
@@ -17,25 +18,34 @@ Vue.use(Oruga, {
   iconComponent: 'vue-fontawesome',
   statusIcon: true,
   button: {
+    override: true,
     rootClass: 'btn',
-    outlinedClass: 'btn-outline-primary',
-    disabledClass: 'btn-disabled'
+    outlinedClass: 'btn-outline-',
+    disabledClass: 'btn-disabled',
+    variantClass: (variant, context) => { // Apply variant when the element is not outline
+      if (!context.props.outlined) {
+        return `btn-${variant}`
+      }
+    }
   },
   field: {
-    rootClass: 'form-group',
-    labelClass: '',
+    labelClass: 'form-label',
     messageClass: 'form-text',
     variantClass: 'field-'
   },
   input: {
     inputClass: 'form-control',
-    variantClass: 'input-'
+    variantClass: (variant) => {
+      switch (variant) {
+        case 'danger':
+          return 'is-invalid'
+      }
+    }
   },
   dropdown: {
-    override: true,
     rootClass: 'dropdown',
-    menuClass: 'dropdown-menu show',
-    itemClass: 'dropdown-item'
+    itemClass: 'dropdown-item',
+    itemActiveClass: 'active'
   },
   steps: {
     itemActiveClass: 'steps-nav-item-active',
@@ -44,8 +54,9 @@ Vue.use(Oruga, {
     stepDividerClass: 'step-divider',
   },
   checkbox: {
-    checkClass: 'checkbox',
-    checkCheckedClass: 'checkbox-checked'
+    checkClass: 'form-check',
+    checkCheckedClass: 'form-check-checked',
+    labelClass: 'form-check-label'
   },
 })
 

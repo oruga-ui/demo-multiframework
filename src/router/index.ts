@@ -5,28 +5,28 @@ Vue.use(VueRouter)
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    redirect: '/Tailwind'
+    redirect: '/tailwind'
   },
   {
-    path: '/Tailwind',
+    path: '/tailwind',
     name: 'Tailwind',
     component: () => import('../views/Tailwind.vue')
   },
   {
-    path: '/Bootstrap',
+    path: '/bootstrap',
     name: 'Bootstrap',
     component: () => import('../views/Bootstrap.vue')
   },
   {
-    path: '/Bulma',
+    path: '/bulma',
     name: 'Bulma',
     component: () => import('../views/Bulma.vue')
   },
-  // {
-  //   path: '/Material',
-  //   name: 'Material',
-  //   component: () => import('../views/Material.vue')
-  // }
+  {
+    path: '/material',
+    name: 'Material',
+    component: () => import('../views/Material.vue')
+  }
 ]
 
 const router = new VueRouter({

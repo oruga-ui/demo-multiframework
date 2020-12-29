@@ -404,11 +404,10 @@ html {
   /* REMOVE ON LITE */
   /* --- */
 }
-.o-chk input[type=checkbox] {
+.o-chk__check {
   outline: none;
   margin: 0;
   vertical-align: top;
-  background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-appearance: none;
@@ -416,8 +415,6 @@ html {
   appearance: none;
   -webkit-print-color-adjust: exact;
   color-adjust: exact;
-}
-.o-chk__check {
   flex-shrink: 0;
   cursor: pointer;
   background-repeat: no-repeat;
@@ -885,11 +882,10 @@ html {
   /* REMOVE ON LITE */
   /* --- */
 }
-.o-radio input[type=radio] {
+.o-radio__check {
   margin: 0;
   vertical-align: top;
   outline: none;
-  background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   -webkit-appearance: none;
@@ -897,8 +893,6 @@ html {
   appearance: none;
   -webkit-print-color-adjust: exact;
   color-adjust: exact;
-}
-.o-radio__check {
   border-radius: 50%;
   cursor: pointer;
   background-repeat: no-repeat;
