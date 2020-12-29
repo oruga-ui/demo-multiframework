@@ -3,6 +3,7 @@
 
 /* Button */
 .btn {
+  outline: none;
   @apply font-bold py-2 px-4 bg-blue-500 text-white rounded;
 }
 .btn-rounded {
@@ -61,10 +62,6 @@
 }
 
 /* Steps */
-
-.steps-nav-item-active {
-
-}
 
 .step-divider {
   background: #b5b5b5;

@@ -1,8 +1,10 @@
-/* Steps */
+/* Buttons */
 
-.steps-nav-item-active {
-
+.btn {
+  height: 100%;
 }
+
+/* Steps */
 
 .step-divider {
   background: #b5b5b5;

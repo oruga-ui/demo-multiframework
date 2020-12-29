@@ -18,7 +18,6 @@ Vue.use(Oruga, {
   iconComponent: 'vue-fontawesome',
   statusIcon: true,
   button: {
-    override: true,
     rootClass: 'btn',
     outlinedClass: 'btn-outline-',
     disabledClass: 'btn-disabled',

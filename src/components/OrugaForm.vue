@@ -9,9 +9,9 @@
                 variant="primary"
                 slot="trigger"
                 slot-scope="{ active }"
-              >
+                :icon-right="active ? 'caret-up' : 'caret-down'">
+
                 <span>{{ currentMenu.text }}</span>
-                <o-icon :icon="active ? 'caret-up' : 'caret-down'"></o-icon>
               </o-button>
 
               <o-dropdown-item
@@ -120,6 +120,7 @@
         <div class="o-demo__navigation-wrapper">
           <o-button
             outlined
+            icon-left="chevron-left"
             variant="primary"
             v-show="!previous.disabled"
             @click.prevent="previous.action"
@@ -128,6 +129,7 @@
           </o-button>
           <o-button
             outlined
+            icon-right="chevron-right"
             variant="primary"
             v-show="!next.disabled"
             @click.prevent="goNextIfStepIsValid(next.action)"
