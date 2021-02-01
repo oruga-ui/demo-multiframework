@@ -32,7 +32,11 @@ Vue.use(Oruga, {
   input: {
     inputClass: 'input',
     roundedClass: 'rounded',
-    variantClass: 'input-'
+    variantClass: 'input-',
+    iconRightClass: 'input-icon-right'
+  },
+  icon: {
+    variantClass: 'input-icon-'
   },
   checkbox: {
     checkClass: 'checkbox',

@@ -34,6 +34,13 @@
 .input-danger {
   @apply border-red-500;
 }
+.input-icon-right {
+  right: 0.5rem
+}
+
+.input-icon-danger {
+  @apply text-red-500;
+}
 
 /* Dropdown */
 .dropdown {
