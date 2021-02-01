@@ -1,5 +1,7 @@
-import { getValueByPath } from './helpers.js';
-import { c as config } from './plugins-948abce9.js';
+'use strict';
+
+var helpers = require('./helpers.js');
+var plugins = require('./plugins-263ee8b1.js');
 
 var MatchMediaMixin = {
   props: {
@@ -28,8 +30,8 @@ var MatchMediaMixin = {
       let width = this.mobileBreakpoint;
 
       if (!width) {
-        const defaultWidth = getValueByPath(config, `mobileBreakpoint`, '1023px');
-        width = getValueByPath(config, `${this.$options.configField}.mobileBreakpoint`, defaultWidth);
+        const defaultWidth = helpers.getValueByPath(plugins.config, `mobileBreakpoint`, '1023px');
+        width = helpers.getValueByPath(plugins.config, `${this.$options.configField}.mobileBreakpoint`, defaultWidth);
       }
 
       this.$matchMediaRef = window.matchMedia(`(max-width: ${width})`);
@@ -46,4 +48,4 @@ var MatchMediaMixin = {
 
 };
 
-export { MatchMediaMixin as M };
+exports.MatchMediaMixin = MatchMediaMixin;

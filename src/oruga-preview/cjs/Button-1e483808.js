@@ -1,6 +1,8 @@
-import { getValueByPath } from './helpers.js';
-import { B as BaseComponentMixin, c as config, n as normalizeComponent } from './plugins-948abce9.js';
-import { _ as __vue_component__$1 } from './Icon-98338a0a.js';
+'use strict';
+
+var helpers = require('./helpers.js');
+var plugins = require('./plugins-263ee8b1.js');
+var Icon = require('./Icon-34e90cf4.js');
 
 //
 /**
@@ -13,10 +15,10 @@ import { _ as __vue_component__$1 } from './Icon-98338a0a.js';
 var script = {
   name: 'OButton',
   components: {
-    [__vue_component__$1.name]: __vue_component__$1
+    [Icon.__vue_component__.name]: Icon.__vue_component__
   },
   configField: 'button',
-  mixins: [BaseComponentMixin],
+  mixins: [plugins.BaseComponentMixin],
   inheritAttrs: false,
   props: {
     /**
@@ -58,7 +60,7 @@ var script = {
     rounded: {
       type: Boolean,
       default: () => {
-        return getValueByPath(config, 'button.rounded', false);
+        return helpers.getValueByPath(plugins.config, 'button.rounded', false);
       }
     },
 
@@ -184,7 +186,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  const __vue_component__ = /*#__PURE__*/normalizeComponent(
+  const __vue_component__ = /*#__PURE__*/plugins.normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -197,4 +199,4 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-export { __vue_component__ as _ };
+exports.__vue_component__ = __vue_component__;

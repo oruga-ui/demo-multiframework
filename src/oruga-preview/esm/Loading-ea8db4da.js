@@ -1,9 +1,7 @@
-'use strict';
-
-var helpers = require('./helpers.js');
-var plugins = require('./plugins-2885446e.js');
-var Icon = require('./Icon-31dd3104.js');
-var ssr = require('./ssr-39c7e185.js');
+import { getValueByPath, removeElement } from './helpers.js';
+import { B as BaseComponentMixin, c as config, n as normalizeComponent } from './plugins-10f43392.js';
+import { _ as __vue_component__$1 } from './Icon-f1d8bf6f.js';
+import { H as HTMLElement } from './ssr-1ee179b4.js';
 
 //
 /**
@@ -16,15 +14,15 @@ var ssr = require('./ssr-39c7e185.js');
 var script = {
   name: 'OLoading',
   components: {
-    [Icon.__vue_component__.name]: Icon.__vue_component__
+    [__vue_component__$1.name]: __vue_component__$1
   },
-  mixins: [plugins.BaseComponentMixin],
+  mixins: [BaseComponentMixin],
   configField: 'loading',
   props: {
     /** Whether modal is active or not,  use the .sync modifier (Vue 2.x) or v-model:active (Vue 3.x) to make it two-way binding */
     active: Boolean,
     programmatic: Boolean,
-    container: [Object, Function, ssr.HTMLElement],
+    container: [Object, Function, HTMLElement],
 
     /** Loader will overlay the full page */
     fullPage: {
@@ -36,7 +34,7 @@ var script = {
     animation: {
       type: String,
       default: () => {
-        return helpers.getValueByPath(plugins.config, 'loading.animation', 'fade');
+        return getValueByPath(config, 'loading.animation', 'fade');
       }
     },
 
@@ -56,7 +54,7 @@ var script = {
     icon: {
       type: String,
       default: () => {
-        return helpers.getValueByPath(plugins.config, 'loading.icon', 'sync-alt');
+        return getValueByPath(config, 'loading.icon', 'sync-alt');
       }
     },
 
@@ -131,7 +129,7 @@ var script = {
         this.isActive = false;
         setTimeout(() => {
           this.$destroy();
-          helpers.removeElement(this.$el);
+          removeElement(this.$el);
         }, 150);
       }
     },
@@ -202,7 +200,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  const __vue_component__ = /*#__PURE__*/plugins.normalizeComponent(
+  const __vue_component__ = /*#__PURE__*/normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -215,4 +213,4 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-exports.__vue_component__ = __vue_component__;
+export { __vue_component__ as _ };

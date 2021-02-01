@@ -3,10 +3,10 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('./helpers.js');
-var plugins = require('./plugins-2885446e.js');
-require('./Icon-31dd3104.js');
-require('./MatchMediaMixin-fe914401.js');
-var Pagination = require('./Pagination-42ab8b1a.js');
+var plugins = require('./plugins-263ee8b1.js');
+require('./Icon-34e90cf4.js');
+require('./MatchMediaMixin-8003262e.js');
+var Pagination = require('./Pagination-6879f014.js');
 
 const Plugin = {
   install(Vue) {

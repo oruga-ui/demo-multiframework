@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var helpers = require('./helpers.js');
-var plugins = require('./plugins-2885446e.js');
+var plugins = require('./plugins-263ee8b1.js');
 
 /**
  * A placeholder for content to load

@@ -1,5 +1,5 @@
 import { getValueByPath, createAbsoluteElement, removeElement } from './helpers.js';
-import { B as BaseComponentMixin, c as config, n as normalizeComponent } from './plugins-948abce9.js';
+import { B as BaseComponentMixin, c as config, n as normalizeComponent } from './plugins-10f43392.js';
 
 //
 /**

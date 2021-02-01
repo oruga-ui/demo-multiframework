@@ -1,11 +1,13 @@
-import { getValueByPath, isMobile, matchWithGroups } from './helpers.js';
-import { c as config, B as BaseComponentMixin, n as normalizeComponent } from './plugins-948abce9.js';
-import { _ as __vue_component__$3 } from './Icon-98338a0a.js';
-import { F as FormElementMixin } from './FormElementMixin-fc713fb1.js';
-import { _ as __vue_component__$1 } from './Input-37c8e91d.js';
-import { M as MatchMediaMixin } from './MatchMediaMixin-bec150b5.js';
-import { _ as __vue_component__$4, a as __vue_component__$5 } from './DropdownItem-e3268f8f.js';
-import { _ as __vue_component__$2 } from './Select-f13cdc5d.js';
+'use strict';
+
+var helpers = require('./helpers.js');
+var plugins = require('./plugins-263ee8b1.js');
+var Icon = require('./Icon-34e90cf4.js');
+var FormElementMixin = require('./FormElementMixin-101c22e9.js');
+var Input = require('./Input-4e18cae9.js');
+var MatchMediaMixin = require('./MatchMediaMixin-8003262e.js');
+var DropdownItem = require('./DropdownItem-fe561fb3.js');
+var Select = require('./Select-678800f7.js');
 
 const AM = 'AM';
 const PM = 'PM';
@@ -37,7 +39,7 @@ const defaultTimeParser = (timeString, vm) => {
 
         return `((?!=<${part.type}>)\\d+)`;
       }).join('');
-      const timeGroups = matchWithGroups(formatRegex, timeString); // We do a simple validation for the group.
+      const timeGroups = helpers.matchWithGroups(formatRegex, timeString); // We do a simple validation for the group.
       // If it is not valid, it will fallback to Date.parse below
 
       timeGroups.hour = timeGroups.hour ? parseInt(timeGroups.hour, 10) : null;
@@ -93,7 +95,7 @@ const defaultTimeParser = (timeString, vm) => {
 };
 
 var TimepickerMixin = {
-  mixins: [FormElementMixin],
+  mixins: [FormElementMixin.FormElementMixin],
   inheritAttrs: false,
   props: {
     value: Date,
@@ -130,7 +132,7 @@ var TimepickerMixin = {
     timeFormatter: {
       type: Function,
       default: (date, vm) => {
-        const timeFormatter = getValueByPath(config, 'timepicker.timeFormatter', undefined);
+        const timeFormatter = helpers.getValueByPath(plugins.config, 'timepicker.timeFormatter', undefined);
 
         if (typeof timeFormatter === 'function') {
           return timeFormatter(date);
@@ -142,7 +144,7 @@ var TimepickerMixin = {
     timeParser: {
       type: Function,
       default: (date, vm) => {
-        const timeParser = getValueByPath(config, 'timepicker.timeParser', undefined);
+        const timeParser = helpers.getValueByPath(plugins.config, 'timepicker.timeParser', undefined);
 
         if (typeof timeParser === 'function') {
           return timeParser(date);
@@ -154,13 +156,13 @@ var TimepickerMixin = {
     mobileNative: {
       type: Boolean,
       default: () => {
-        return getValueByPath(config, 'timepicker.mobileNative', true);
+        return helpers.getValueByPath(plugins.config, 'timepicker.mobileNative', true);
       }
     },
     timeCreator: {
       type: Function,
       default: () => {
-        const timeCreator = getValueByPath(config, 'timepicker.timeCreator', undefined);
+        const timeCreator = helpers.getValueByPath(plugins.config, 'timepicker.timeCreator', undefined);
 
         if (typeof timeCreator === 'function') {
           return timeCreator();
@@ -379,7 +381,7 @@ var TimepickerMixin = {
     },
 
     isMobile() {
-      return this.mobileNative && isMobile.any();
+      return this.mobileNative && helpers.isMobile.any();
     },
 
     isHourFormat24() {
@@ -764,14 +766,14 @@ var TimepickerMixin = {
 var script = {
   name: 'OTimepicker',
   components: {
-    [__vue_component__$1.name]: __vue_component__$1,
-    [__vue_component__$2.name]: __vue_component__$2,
-    [__vue_component__$3.name]: __vue_component__$3,
-    [__vue_component__$4.name]: __vue_component__$4,
-    [__vue_component__$5.name]: __vue_component__$5
+    [Input.__vue_component__.name]: Input.__vue_component__,
+    [Select.__vue_component__.name]: Select.__vue_component__,
+    [Icon.__vue_component__.name]: Icon.__vue_component__,
+    [DropdownItem.__vue_component__.name]: DropdownItem.__vue_component__,
+    [DropdownItem.__vue_component__$1.name]: DropdownItem.__vue_component__$1
   },
   configField: 'timepicker',
-  mixins: [BaseComponentMixin, TimepickerMixin, MatchMediaMixin],
+  mixins: [plugins.BaseComponentMixin, TimepickerMixin, MatchMediaMixin.MatchMediaMixin],
   inheritAttrs: false,
   props: {
     rootClass: [String, Function, Array],
@@ -860,7 +862,7 @@ var __vue_staticRenderFns__ = [];
   
 
   
-  const __vue_component__ = /*#__PURE__*/normalizeComponent(
+  const __vue_component__ = /*#__PURE__*/plugins.normalizeComponent(
     { render: __vue_render__, staticRenderFns: __vue_staticRenderFns__ },
     __vue_inject_styles__,
     __vue_script__,
@@ -873,4 +875,4 @@ var __vue_staticRenderFns__ = [];
     undefined
   );
 
-export { __vue_component__ as _ };
+exports.__vue_component__ = __vue_component__;

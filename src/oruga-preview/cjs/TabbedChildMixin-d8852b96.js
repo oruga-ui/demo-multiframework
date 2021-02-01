@@ -1,6 +1,8 @@
-import { hasFlag } from './helpers.js';
-import { _ as __vue_component__ } from './Icon-98338a0a.js';
-import { S as SlotComponent } from './SlotComponent-c00a1886.js';
+'use strict';
+
+var helpers = require('./helpers.js');
+var Icon = require('./Icon-34e90cf4.js');
+var SlotComponent = require('./SlotComponent-0a757062.js');
 
 const items = 1;
 const sorted = 3;
@@ -15,7 +17,7 @@ var ProviderParentMixin = ((itemName, flags = 0) => {
 
   };
 
-  if (hasFlag(flags, items)) {
+  if (helpers.hasFlag(flags, items)) {
     mixin.data = function () {
       return {
         childItems: [],
@@ -47,7 +49,7 @@ var ProviderParentMixin = ((itemName, flags = 0) => {
 
     };
 
-    if (hasFlag(flags, sorted)) {
+    if (helpers.hasFlag(flags, sorted)) {
       mixin.computed = {
         /**
          * When items are added/removed sort them according to their position
@@ -68,8 +70,8 @@ var ProviderParentMixin = ((itemName, flags = 0) => {
 var TabbedMixin = (cmp => ({
   mixins: [ProviderParentMixin(cmp, Sorted)],
   components: {
-    [__vue_component__.name]: __vue_component__,
-    [SlotComponent.name]: SlotComponent
+    [Icon.__vue_component__.name]: Icon.__vue_component__,
+    [SlotComponent.SlotComponent.name]: SlotComponent.SlotComponent
   },
   props: {
     /** @model */
@@ -181,7 +183,7 @@ var InjectedChildMixin = ((parentItemName, flags = 0) => {
       this.newValue = typeof this.value === 'undefined' ? this.parent._nextSequence() : this.value;
 
       if (!this.parent) {
-        if (!hasFlag(flags, optional)) {
+        if (!helpers.hasFlag(flags, optional)) {
           throw new Error('You should wrap ' + this.$options.name + ' in a ' + parentItemName);
         }
       } else if (this.parent._registerItem) {
@@ -197,7 +199,7 @@ var InjectedChildMixin = ((parentItemName, flags = 0) => {
 
   };
 
-  if (hasFlag(flags, sorted$1)) {
+  if (helpers.hasFlag(flags, sorted$1)) {
     mixin.data = () => {
       return {
         index: null
@@ -318,4 +320,5 @@ var TabbedChildMixin = (parentCmp => ({
 
 }));
 
-export { TabbedMixin as T, TabbedChildMixin as a };
+exports.TabbedChildMixin = TabbedChildMixin;
+exports.TabbedMixin = TabbedMixin;

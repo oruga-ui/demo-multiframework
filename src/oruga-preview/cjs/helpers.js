@@ -49,7 +49,7 @@ function bound(val, min, max) {
  */
 
 function getValueByPath(obj, path, defaultValue = undefined) {
-  const value = path.split('.').reduce((o, i) => typeof o !== 'undefined' ? o[i] : obj[i], obj);
+  const value = path.split('.').reduce((o, i) => typeof o !== 'undefined' ? o[i] : undefined, obj);
   return typeof value !== 'undefined' ? value : defaultValue;
 }
 /**

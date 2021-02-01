@@ -1,4 +1,4 @@
-/*! Oruga v0.3.0-dev | MIT License | github.com/oruga-ui/oruga */
+/*! Oruga v0.3.0 | MIT License | github.com/oruga-ui/oruga */
 
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
@@ -24,7 +24,7 @@
      */
 
     function getValueByPath(obj, path, defaultValue = undefined) {
-      const value = path.split('.').reduce((o, i) => typeof o !== 'undefined' ? o[i] : obj[i], obj);
+      const value = path.split('.').reduce((o, i) => typeof o !== 'undefined' ? o[i] : undefined, obj);
       return typeof value !== 'undefined' ? value : defaultValue;
     }
     /**
