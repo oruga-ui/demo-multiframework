@@ -71,6 +71,7 @@
             id="username"
             type="text"
             placeholder="Username"
+            expanded
           />
         </o-field>
         <o-field
