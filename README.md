@@ -1,4 +1,4 @@
-# Oruga Demo Multiframework
+# Oruga Multiframework Demo
 
 A simple registration form made with the upcoming [Oruga](https://github.com/oruga-ui/oruga) release combined with 4 different styles: `Tailwind`, `Bootstrap 5`, `Bulma` and `Material`!
 
