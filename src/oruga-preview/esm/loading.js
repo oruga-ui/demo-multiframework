@@ -1,9 +1,9 @@
 import { merge } from './helpers.js';
-import { e as registerComponent, b as registerComponentProgrammatic, u as use, V as VueInstance } from './plugins-3fa0f67b.js';
-import './Icon-60401233.js';
+import { e as registerComponent, b as registerComponentProgrammatic, u as use, V as VueInstance } from './plugins-948abce9.js';
+import './Icon-98338a0a.js';
 import './ssr-1ee179b4.js';
-import { _ as __vue_component__ } from './Loading-5f6db072.js';
-export { _ as OLoading } from './Loading-5f6db072.js';
+import { _ as __vue_component__ } from './Loading-833bf370.js';
+export { _ as OLoading } from './Loading-833bf370.js';
 
 let localVueInstance;
 const LoadingProgrammatic = {

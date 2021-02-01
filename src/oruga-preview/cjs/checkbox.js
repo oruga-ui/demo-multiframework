@@ -3,9 +3,9 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('./helpers.js');
-var plugins = require('./plugins-3f7829d9.js');
-require('./CheckRadioMixin-b0946540.js');
-var Checkbox = require('./Checkbox-e9020abb.js');
+var plugins = require('./plugins-2885446e.js');
+require('./CheckRadioMixin-df88dd8e.js');
+var Checkbox = require('./Checkbox-6d9dffb4.js');
 
 const Plugin = {
   install(Vue) {

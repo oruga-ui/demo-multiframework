@@ -22,6 +22,12 @@
 
 /* Steps */
 
+.step-marker {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
 .step-divider {
   background: #b5b5b5;
 }
@@ -57,6 +63,10 @@
 .form-check-checked {
   background-color: var(--primary);
   border-color: var(--primary);
+}
+
+.form-check-label {
+  margin-left: 0.2rem;
 }
 
 .form-check:hover:after {

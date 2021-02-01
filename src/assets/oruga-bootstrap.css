@@ -11,8 +11,19 @@
     color: var(--bs-danger);
 }
 
+/* Checkbox */
+
+.form-check-label {
+  margin-left: 0.2rem;
+}
 
 /* Steps */
+
+.step-marker {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
 
 .step-divider {
   background: #b5b5b5;

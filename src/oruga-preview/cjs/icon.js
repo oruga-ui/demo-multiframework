@@ -3,8 +3,8 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('./helpers.js');
-var plugins = require('./plugins-3f7829d9.js');
-var Icon = require('./Icon-5b4af0b7.js');
+var plugins = require('./plugins-2885446e.js');
+var Icon = require('./Icon-31dd3104.js');
 
 const Plugin = {
   install(Vue) {

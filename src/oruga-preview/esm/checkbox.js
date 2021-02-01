@@ -1,8 +1,8 @@
 import './helpers.js';
-import { e as registerComponent, u as use } from './plugins-3fa0f67b.js';
-import './CheckRadioMixin-e43b9266.js';
-import { _ as __vue_component__ } from './Checkbox-31def3b6.js';
-export { _ as OCheckbox } from './Checkbox-31def3b6.js';
+import { e as registerComponent, u as use } from './plugins-948abce9.js';
+import './CheckRadioMixin-7f4f93a9.js';
+import { _ as __vue_component__ } from './Checkbox-71205772.js';
+export { _ as OCheckbox } from './Checkbox-71205772.js';
 
 const Plugin = {
   install(Vue) {

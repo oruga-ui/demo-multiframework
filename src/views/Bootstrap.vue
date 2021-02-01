@@ -47,8 +47,8 @@ Vue.use(Oruga, {
     itemActiveClass: 'is-div-active'
   },
   steps: {
-    itemActiveClass: 'steps-nav-item-active',
-    itemPreviousClass: 'steps-nav-item-previous',
+    itemHeaderActiveClass: 'steps-nav-item-active',
+    itemHeaderPreviousClass: 'steps-nav-item-previous',
     stepMarkerClass: 'step-marker',
     stepDividerClass: 'step-divider',
   },

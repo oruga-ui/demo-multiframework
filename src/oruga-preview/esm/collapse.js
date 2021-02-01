@@ -1,5 +1,5 @@
 import { getValueByPath } from './helpers.js';
-import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, u as use } from './plugins-3fa0f67b.js';
+import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, u as use } from './plugins-948abce9.js';
 
 /**
  * An easy way to toggle what you want
@@ -48,9 +48,9 @@ var script = {
       }
 
     },
-    rootClass: String,
-    triggerClass: String,
-    contentClass: String
+    rootClass: [String, Function, Array],
+    triggerClass: [String, Function, Array],
+    contentClass: [String, Function, Array]
   },
 
   data() {

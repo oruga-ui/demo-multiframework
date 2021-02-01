@@ -36,7 +36,8 @@ Vue.use(Oruga, {
   },
   checkbox: {
     checkClass: 'checkbox',
-    checkCheckedClass: 'checkbox-checked'
+    checkCheckedClass: 'checkbox-checked',
+    labelClass: 'checkbox-label',
   },
   dropdown: {
     rootClass: 'dropdown',
@@ -45,8 +46,8 @@ Vue.use(Oruga, {
     itemActiveClass: 'dropdown-item-active'
   },
   steps: {
-    itemActiveClass: 'steps-nav-item-active',
-    itemPreviousClass: 'steps-nav-item-previous',
+    itemHeaderActiveClass: 'steps-nav-item-active',
+    itemHeaderPreviousClass: 'steps-nav-item-previous',
     stepMarkerClass: 'step-marker',
     stepDividerClass: 'step-divider',
   }

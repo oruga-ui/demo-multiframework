@@ -3,7 +3,8 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var helpers = require('./helpers.js');
-var plugins = require('./plugins-3f7829d9.js');
+var plugins = require('./plugins-2885446e.js');
+var MatchMediaMixin = require('./MatchMediaMixin-fe914401.js');
 
 //
 /**
@@ -15,7 +16,7 @@ var plugins = require('./plugins-3f7829d9.js');
 
 var script = {
   name: 'OSidebar',
-  mixins: [plugins.BaseComponentMixin],
+  mixins: [plugins.BaseComponentMixin, MatchMediaMixin.MatchMediaMixin],
   configField: 'sidebar',
   props: {
     /** To control the behaviour of the sidebar programmatically, use the .sync modifier (Vue 2.x) or v-model:open (Vue 3.x) to make it two-way binding */
@@ -55,12 +56,12 @@ var script = {
 
     /**
      * Custom layout on mobile
-     * @values fullwidth, reduce, hidden
+     * @values fullwidth, reduced, hidden
      */
     mobile: {
       type: String,
       validator: value => {
-        return ['', 'fullwidth', 'reduce', 'hidden'].indexOf(value) >= 0;
+        return ['', 'fullwidth', 'reduced', 'hidden'].indexOf(value) >= 0;
       }
     },
 
@@ -100,22 +101,20 @@ var script = {
         return ['clip', 'keep'].indexOf(value) >= 0;
       }
     },
-    rootClass: String,
-    backgroundClass: String,
-    contentClass: String,
-    fixedClass: String,
-    staticClass: String,
-    absoluteClass: String,
-    fullheightClass: String,
-    fullwidthClass: String,
-    rightClass: String,
-    reduceClass: String,
-    expandOnHoverClass: String,
-    expandOnHoverFixedClass: String,
-    mobileReduceClass: String,
-    mobileHideClass: String,
-    mobileFullwidthClass: String,
-    variantClass: String
+    rootClass: [String, Function, Array],
+    overlayClass: [String, Function, Array],
+    contentClass: [String, Function, Array],
+    fixedClass: [String, Function, Array],
+    staticClass: [String, Function, Array],
+    absoluteClass: [String, Function, Array],
+    fullheightClass: [String, Function, Array],
+    fullwidthClass: [String, Function, Array],
+    rightClass: [String, Function, Array],
+    reduceClass: [String, Function, Array],
+    expandOnHoverClass: [String, Function, Array],
+    expandOnHoverFixedClass: [String, Function, Array],
+    variantClass: [String, Function, Array],
+    mobileClass: [String, Function, Array]
   },
 
   data() {
@@ -129,11 +128,13 @@ var script = {
 
   computed: {
     rootClasses() {
-      return [this.computedClass('rootClass', 'o-side')];
+      return [this.computedClass('rootClass', 'o-side'), {
+        [this.computedClass('mobileClass', 'o-side--mobile')]: this.isMatchMedia
+      }];
     },
 
-    backgroundClasses() {
-      return [this.computedClass('backgroundClass', 'o-side__background')];
+    overlayClasses() {
+      return [this.computedClass('overlayClass', 'o-side__overlay')];
     },
 
     contentClasses() {
@@ -148,21 +149,15 @@ var script = {
       }, {
         [this.computedClass('fullheightClass', 'o-side__content--fullheight')]: this.fullheight
       }, {
-        [this.computedClass('fullwidthClass', 'o-side__content--fullwidth')]: this.fullwidth
+        [this.computedClass('fullwidthClass', 'o-side__content--fullwidth')]: this.fullwidth || this.mobile === 'fullwidth' && this.isMatchMedia
       }, {
         [this.computedClass('rightClass', 'o-side__content--right')]: this.right
       }, {
-        [this.computedClass('reduceClass', 'o-side__content--mini')]: this.reduce
+        [this.computedClass('reduceClass', 'o-side__content--mini')]: this.reduce || this.mobile === 'reduced' && this.isMatchMedia
       }, {
         [this.computedClass('expandOnHoverClass', 'o-side__content--mini-expand')]: this.expandOnHover && this.mobile !== 'fullwidth'
       }, {
         [this.computedClass('expandOnHoverFixedClass', 'o-side__content--expand-mini-hover-fixed')]: this.expandOnHover && this.expandOnHoverFixed && this.mobile !== 'fullwidth'
-      }, {
-        [this.computedClass('mobileReduceClass', 'o-side__content--mini-mobile')]: this.mobile === 'reduce'
-      }, {
-        [this.computedClass('mobileHideClass', 'o-side__content--hidden-mobile')]: this.mobile === 'hide'
-      }, {
-        [this.computedClass('mobileFullwidthClass', 'o-side__content--fullwidth-mobile')]: this.mobile === 'fullwidth'
       }];
     },
 
@@ -180,6 +175,10 @@ var script = {
 
     isAbsolute() {
       return this.position === 'absolute';
+    },
+
+    hideOnMobile() {
+      return this.mobile === 'hidden' && this.isMatchMedia;
     }
 
   },
@@ -354,7 +353,7 @@ var script = {
 const __vue_script__ = script;
 
 /* template */
-var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.rootClasses},[(_vm.overlay && _vm.isOpen)?_c('div',{class:_vm.backgroundClasses}):_vm._e(),_c('transition',{attrs:{"name":_vm.transitionName},on:{"before-enter":_vm.beforeEnter,"after-enter":_vm.afterEnter}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isOpen),expression:"isOpen"}],ref:"sidebarContent",class:_vm.contentClasses},[_vm._t("default")],2)])],1)};
+var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{directives:[{name:"show",rawName:"v-show",value:(!_vm.hideOnMobile),expression:"!hideOnMobile"}],class:_vm.rootClasses},[(_vm.overlay && _vm.isOpen)?_c('div',{class:_vm.overlayClasses}):_vm._e(),_c('transition',{attrs:{"name":_vm.transitionName},on:{"before-enter":_vm.beforeEnter,"after-enter":_vm.afterEnter}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.isOpen),expression:"isOpen"}],ref:"sidebarContent",class:_vm.contentClasses},[_vm._t("default")],2)])],1)};
 var __vue_staticRenderFns__ = [];
 
   /* style */

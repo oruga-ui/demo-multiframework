@@ -3,8 +3,8 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 require('./helpers.js');
-var plugins = require('./plugins-3f7829d9.js');
-var Tooltip = require('./Tooltip-70eb1ba3.js');
+var plugins = require('./plugins-2885446e.js');
+var Tooltip = require('./Tooltip-9ef48b39.js');
 
 const Plugin = {
   install(Vue) {

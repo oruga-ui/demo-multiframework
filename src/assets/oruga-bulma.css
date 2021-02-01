@@ -4,6 +4,12 @@
   background: #b5b5b5;
 }
 
+.step-marker {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
 .steps-nav-item-active .step-marker {
   color: #00d1b2;
   border-color: #00d1b2;

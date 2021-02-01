@@ -1,8 +1,8 @@
 import { getValueByPath, toCssDimension, debounce, createAbsoluteElement, removeElement } from './helpers.js';
-import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, u as use } from './plugins-3fa0f67b.js';
-import './Icon-60401233.js';
-import { F as FormElementMixin } from './FormElementMixin-4e63eba5.js';
-import { _ as __vue_component__$1 } from './Input-eac33c4f.js';
+import { B as BaseComponentMixin, c as config, n as normalizeComponent, e as registerComponent, u as use } from './plugins-948abce9.js';
+import './Icon-98338a0a.js';
+import { F as FormElementMixin } from './FormElementMixin-fc713fb1.js';
+import { _ as __vue_component__$1 } from './Input-37c8e91d.js';
 
 //
 /**
@@ -77,7 +77,7 @@ var script = {
      * Position of dropdown
      * @values auto, top, bottom
      */
-    dropdownPosition: {
+    menuPosition: {
       type: String,
       default: 'auto'
     },
@@ -113,13 +113,13 @@ var script = {
       type: Array,
       default: () => ['Tab', 'Enter']
     },
-    rootClass: String,
-    menuClass: String,
-    expandedClass: String,
-    menuPositionClass: String,
-    itemClass: String,
-    itemHoverClass: String,
-    itemDisabledClass: String,
+    rootClass: [String, Function, Array],
+    menuClass: [String, Function, Array],
+    expandedClass: [String, Function, Array],
+    menuPositionClass: [String, Function, Array],
+    itemClass: [String, Function, Array],
+    itemHoverClass: [String, Function, Array],
+    itemGroupTitleClass: [String, Function, Array],
 
     /** Classes to apply on internal input (@see o-input style docs) */
     inputClasses: Object
@@ -130,7 +130,7 @@ var script = {
       selected: null,
       hovered: null,
       isActive: false,
-      newValue: this.model,
+      newValue: this.value,
       newAutocomplete: this.autocomplete || 'off',
       isListInViewportVertically: true,
       hasFocus: false,
@@ -157,7 +157,7 @@ var script = {
     },
 
     itemEmptyClasses() {
-      return [...this.itemClasses, this.computedClass('itemDisabledClass', 'o-acp__item--disabled')];
+      return [...this.itemClasses, this.computedClass('itemGroupTitleClass', 'o-acp__item-group-title')];
     },
 
     inputBind() {
@@ -239,7 +239,7 @@ var script = {
     },
 
     newDropdownPosition() {
-      if (this.dropdownPosition === 'top' || this.dropdownPosition === 'auto' && !this.isListInViewportVertically) {
+      if (this.menuPosition === 'top' || this.menuPosition === 'auto' && !this.isListInViewportVertically) {
         return 'top';
       }
 
@@ -284,7 +284,7 @@ var script = {
      * to open upwards.
      */
     isActive(active) {
-      if (this.dropdownPosition === 'auto') {
+      if (this.menuPosition === 'auto') {
         if (active) {
           this.calcDropdownInViewportVertical();
         } else {
@@ -320,7 +320,7 @@ var script = {
     },
 
     /**
-     * Select first option if "keep-first
+     * Select first option if "keep-first"
      */
     data(value) {
       // Keep first option always pre-selected
@@ -359,6 +359,11 @@ var script = {
     setSelected(option, closeDropdown = true, event = undefined) {
       if (option === undefined) return;
       this.selected = option;
+      /**
+       * @property {Object} selected selected option
+       * @property {Event} event native event
+       */
+
       this.$emit('select', this.selected, event);
 
       if (this.selected !== null) {
@@ -414,7 +419,13 @@ var script = {
      * Close dropdown if clicked outside.
      */
     clickedOutside(event) {
-      if (!this.hasFocus && this.whiteList.indexOf(event.target) < 0) this.isActive = false;
+      if (!this.hasFocus && this.whiteList.indexOf(event.target) < 0) {
+        if (this.keepFirst && this.hovered) {
+          this.setSelected(this.hovered, true);
+        } else {
+          this.isActive = false;
+        }
+      }
     },
 
     /**
@@ -599,7 +610,7 @@ var script = {
   created() {
     if (typeof window !== 'undefined') {
       document.addEventListener('click', this.clickedOutside);
-      if (this.dropdownPosition === 'auto') window.addEventListener('resize', this.calcDropdownInViewportVertical);
+      if (this.menuPosition === 'auto') window.addEventListener('resize', this.calcDropdownInViewportVertical);
     }
   },
 
@@ -619,7 +630,7 @@ var script = {
   beforeDestroy() {
     if (typeof window !== 'undefined') {
       document.removeEventListener('click', this.clickedOutside);
-      if (this.dropdownPosition === 'auto') window.removeEventListener('resize', this.calcDropdownInViewportVertical);
+      if (this.menuPosition === 'auto') window.removeEventListener('resize', this.calcDropdownInViewportVertical);
     }
 
     if (this.checkInfiniteScroll && this.$refs.dropdown) {

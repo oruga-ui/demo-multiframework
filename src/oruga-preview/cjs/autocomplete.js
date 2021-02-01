@@ -3,10 +3,10 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var helpers = require('./helpers.js');
-var plugins = require('./plugins-3f7829d9.js');
-require('./Icon-5b4af0b7.js');
-var FormElementMixin = require('./FormElementMixin-2354d5ae.js');
-var Input = require('./Input-a0188fd0.js');
+var plugins = require('./plugins-2885446e.js');
+require('./Icon-31dd3104.js');
+var FormElementMixin = require('./FormElementMixin-d665a3fc.js');
+var Input = require('./Input-41c7e8e2.js');
 
 //
 /**
@@ -81,7 +81,7 @@ var script = {
      * Position of dropdown
      * @values auto, top, bottom
      */
-    dropdownPosition: {
+    menuPosition: {
       type: String,
       default: 'auto'
     },
@@ -117,13 +117,13 @@ var script = {
       type: Array,
       default: () => ['Tab', 'Enter']
     },
-    rootClass: String,
-    menuClass: String,
-    expandedClass: String,
-    menuPositionClass: String,
-    itemClass: String,
-    itemHoverClass: String,
-    itemDisabledClass: String,
+    rootClass: [String, Function, Array],
+    menuClass: [String, Function, Array],
+    expandedClass: [String, Function, Array],
+    menuPositionClass: [String, Function, Array],
+    itemClass: [String, Function, Array],
+    itemHoverClass: [String, Function, Array],
+    itemGroupTitleClass: [String, Function, Array],
 
     /** Classes to apply on internal input (@see o-input style docs) */
     inputClasses: Object
@@ -134,7 +134,7 @@ var script = {
       selected: null,
       hovered: null,
       isActive: false,
-      newValue: this.model,
+      newValue: this.value,
       newAutocomplete: this.autocomplete || 'off',
       isListInViewportVertically: true,
       hasFocus: false,
@@ -161,7 +161,7 @@ var script = {
     },
 
     itemEmptyClasses() {
-      return [...this.itemClasses, this.computedClass('itemDisabledClass', 'o-acp__item--disabled')];
+      return [...this.itemClasses, this.computedClass('itemGroupTitleClass', 'o-acp__item-group-title')];
     },
 
     inputBind() {
@@ -243,7 +243,7 @@ var script = {
     },
 
     newDropdownPosition() {
-      if (this.dropdownPosition === 'top' || this.dropdownPosition === 'auto' && !this.isListInViewportVertically) {
+      if (this.menuPosition === 'top' || this.menuPosition === 'auto' && !this.isListInViewportVertically) {
         return 'top';
       }
 
@@ -288,7 +288,7 @@ var script = {
      * to open upwards.
      */
     isActive(active) {
-      if (this.dropdownPosition === 'auto') {
+      if (this.menuPosition === 'auto') {
         if (active) {
           this.calcDropdownInViewportVertical();
         } else {
@@ -324,7 +324,7 @@ var script = {
     },
 
     /**
-     * Select first option if "keep-first
+     * Select first option if "keep-first"
      */
     data(value) {
       // Keep first option always pre-selected
@@ -363,6 +363,11 @@ var script = {
     setSelected(option, closeDropdown = true, event = undefined) {
       if (option === undefined) return;
       this.selected = option;
+      /**
+       * @property {Object} selected selected option
+       * @property {Event} event native event
+       */
+
       this.$emit('select', this.selected, event);
 
       if (this.selected !== null) {
@@ -418,7 +423,13 @@ var script = {
      * Close dropdown if clicked outside.
      */
     clickedOutside(event) {
-      if (!this.hasFocus && this.whiteList.indexOf(event.target) < 0) this.isActive = false;
+      if (!this.hasFocus && this.whiteList.indexOf(event.target) < 0) {
+        if (this.keepFirst && this.hovered) {
+          this.setSelected(this.hovered, true);
+        } else {
+          this.isActive = false;
+        }
+      }
     },
 
     /**
@@ -603,7 +614,7 @@ var script = {
   created() {
     if (typeof window !== 'undefined') {
       document.addEventListener('click', this.clickedOutside);
-      if (this.dropdownPosition === 'auto') window.addEventListener('resize', this.calcDropdownInViewportVertical);
+      if (this.menuPosition === 'auto') window.addEventListener('resize', this.calcDropdownInViewportVertical);
     }
   },
 
@@ -623,7 +634,7 @@ var script = {
   beforeDestroy() {
     if (typeof window !== 'undefined') {
       document.removeEventListener('click', this.clickedOutside);
-      if (this.dropdownPosition === 'auto') window.removeEventListener('resize', this.calcDropdownInViewportVertical);
+      if (this.menuPosition === 'auto') window.removeEventListener('resize', this.calcDropdownInViewportVertical);
     }
 
     if (this.checkInfiniteScroll && this.$refs.dropdown) {

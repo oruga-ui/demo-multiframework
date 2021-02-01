@@ -1,6 +1,6 @@
 import './helpers.js';
-import { B as BaseComponentMixin, n as normalizeComponent, e as registerComponent, u as use } from './plugins-3fa0f67b.js';
-import { F as FormElementMixin } from './FormElementMixin-4e63eba5.js';
+import { B as BaseComponentMixin, n as normalizeComponent, e as registerComponent, u as use } from './plugins-948abce9.js';
+import { F as FormElementMixin } from './FormElementMixin-fc713fb1.js';
 import { F as File } from './ssr-1ee179b4.js';
 
 //
@@ -58,12 +58,12 @@ var script = {
       type: Boolean,
       default: false
     },
-    rootClass: String,
-    draggableClass: String,
-    variantClass: String,
-    expandedClass: String,
-    disabledClass: String,
-    hoveredClass: String
+    rootClass: [String, Function, Array],
+    draggableClass: [String, Function, Array],
+    variantClass: [String, Function, Array],
+    expandedClass: [String, Function, Array],
+    disabledClass: [String, Function, Array],
+    hoveredClass: [String, Function, Array]
   },
 
   data() {
@@ -77,18 +77,16 @@ var script = {
     rootClasses() {
       return [this.computedClass('rootClass', 'o-upl'), {
         [this.computedClass('expandedClass', 'o-upl--expanded')]: this.expanded
+      }, {
+        [this.computedClass('disabledClass', 'o-upl--disabled')]: this.disabled
       }];
     },
 
     draggableClasses() {
       return [this.computedClass('draggableClass', 'o-upl__draggable'), {
-        [this.computedClass('variantClass', 'o-upl__draggable--', this.variant)]: this.variant
-      }, {
         [this.computedClass('hoveredClass', 'o-upl__draggable--hovered')]: !this.variant && this.dragDropFocus
       }, {
         [this.computedClass('variantClass', 'o-upl__draggable--hovered-', this.variant)]: this.variant && this.dragDropFocus
-      }, {
-        [this.computedClass('disabledClass', 'o-upl__draggable--disabled')]: this.disabled
       }];
     }
 
@@ -117,7 +115,7 @@ var script = {
     * emit 'input' event and validate
     */
     onFileChange(event) {
-      if (this.disabled || this.loading) return;
+      if (this.disabled) return;
       if (this.dragDrop) this.updateDragDropFocus(false);
       const value = event.target.files || event.dataTransfer.files;
 
