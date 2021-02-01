@@ -20,6 +20,9 @@
 }
 
 /* Field */
+.field {
+  margin-top: 0.5rem
+}
 .field-label {
   @apply block text-gray-700 text-sm font-bold mb-2;
 }

@@ -34,7 +34,11 @@ Vue.use(Oruga, {
   },
   input: {
     inputClass: 'input',
-    variantClass: 'is-'
+    variantClass: 'is-',
+    iconRightClass: 'input-icon-right'
+  },
+  icon: {
+    variantClass: 'input-icon-'
   },
   dropdown: {
     rootClass: 'dropdown is-active',

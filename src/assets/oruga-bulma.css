@@ -1,3 +1,9 @@
+/* Field */
+
+.field {
+  margin-top: 0.5rem
+}
+
 /* Steps */
 
 .step-divider {
@@ -38,4 +44,13 @@
 .is-div-active {
   background-color: #3273dc;
   color: #fff;
+}
+
+/* Input */
+.input-icon-right {
+  right: 0.5rem
+}
+
+.input-icon-danger {
+  color: red;
 }

@@ -7,6 +7,10 @@
 
 /* Field */
 
+.field {
+  margin-top: 0.5rem
+}
+
 .field-danger.form-text {
     color: var(--bs-danger);
 }

@@ -30,7 +30,8 @@ Vue.use(Oruga, {
   field: {
     labelClass: 'form-label',
     messageClass: 'form-text',
-    variantClass: 'field-'
+    variantClass: 'field-',
+    rootClass: 'field'
   },
   input: {
     inputClass: 'form-control',

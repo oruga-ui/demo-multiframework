@@ -25,6 +25,7 @@ Vue.use(Oruga, {
     disabledClass: 'btn-disabled'
   },
   field: {
+    rootClass: 'field',
     labelClass: 'field-label',
     messageClass: 'text-xs italic',
     variantClass: 'field-'
