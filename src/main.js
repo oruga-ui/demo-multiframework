@@ -1,4 +1,4 @@
-import './oruga-preview/oruga.css'
+import '@oruga-ui/oruga/dist/oruga.css'
 import './assets/common.css';
 
 import Vue from 'vue'
