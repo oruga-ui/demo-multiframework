@@ -21,7 +21,7 @@ Vue.use(Oruga, {
     rootClass: 'btn',
     outlinedClass: 'btn-outline-',
     disabledClass: 'btn-disabled',
-    variantClass: (variant, context) => { // Apply variant when the element is not outline
+    variantClass: (variant, context) => { // Apply variant when the element is not outlined
       if (!context.props.outlined) {
         return `btn-${variant}`
       }
